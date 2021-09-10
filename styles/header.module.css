@@ -30,6 +30,7 @@
 .navLinks{
     display: flex;
     gap: 20px;
+    font-size: 1.1rem;
 }
 
 .navLinks li{
@@ -44,7 +45,7 @@
     left:0;
     height:2px;
     background-color: var(--brown);
-    transition: all ease-in-out .2s;
+    transition: all ease-in-out .3s;
     transform-origin: left;
 }
 .navLinks li:hover::after{

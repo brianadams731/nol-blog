@@ -14,7 +14,7 @@ const BlogCategory = () =>{
                     </div>
                 </div>
                 
-                <div className={[styles.blogCat, styles.midCat].join(" ")} style={{backgroundImage:`url("https://source.unsplash.com/random/350x400/?travel")`}}>
+                <div className={[styles.blogCat, styles.midCat].join(" ")} style={{backgroundImage:`url("https://source.unsplash.com/random/350x400/?nature")`}}>
                     <div className={styles.label}>
                         PERSONAL GROWTH
                     </div>

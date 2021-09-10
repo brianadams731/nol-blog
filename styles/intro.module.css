@@ -1,9 +1,20 @@
 .wrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(to bottom, white 10%, var(--slate) 0);
     padding:0px 25px;
     padding-bottom: 5px;
+}
+
+.wrapper::after {
+    position: absolute;
+    content : "";
+    bottom:0;
+    left:0;
+    height: 90%;
+    width: 90%;
+    background-color: var(--slate);
+    z-index: -1;
 }
 .textBox{
     margin-top: 8%;
@@ -18,7 +29,7 @@
 }
 
 .textBox p{
-    max-width: 50ch;
+    max-width: 40ch;
     font-weight: 300;
     margin-bottom: 15px;
 }
