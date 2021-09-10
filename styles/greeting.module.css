@@ -1,0 +1,40 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    gap:40px;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+}
+
+.imgWrapper{
+    height: 400px;
+    width: 300px;
+}
+
+.textBox{
+    color:white
+}
+
+.textBox h3{
+    font-family: saturday;
+    font-weight: 400;
+    font-size: 4rem;
+    margin-bottom: 5px;
+}
+
+.textBox p{
+    font-size: .8rem;
+    width: 45ch;
+}
+
+.wrapper::after {
+    position: absolute;
+    content: "";
+    background-color: var(--slate);
+    top:0;
+    right:0;
+    height: 90%;
+    width: 85%;
+    z-index: -1;
+}

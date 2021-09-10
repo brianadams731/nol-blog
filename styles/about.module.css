@@ -1,0 +1,22 @@
+.wrapper{
+    padding: 30px;
+    padding-top:0px;
+}
+
+.wrapper h3{
+    font-family: saturday;
+    font-weight: 400;
+    font-size: 4rem;
+    color: grey;
+    text-align: center;
+}
+
+.wrapper p{
+    margin: auto;
+    margin-bottom: 10px;
+    max-width: 70ch;
+}
+
+.wrapper p:last-of-type{
+    margin-bottom: 0;
+}

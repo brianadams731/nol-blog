@@ -1,0 +1,62 @@
+.header h3{
+    font-family: saturday;
+    font-weight: 400;
+    font-size: 6rem;
+    line-height: .8;
+    color: grey;
+    text-align: center;
+}
+.contentWrapper{
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 25px;
+    color:white;
+    margin-bottom: 15px;
+}
+
+.contentWrapper::before, .contentWrapper::after{
+    position: absolute;
+    content:"";
+}
+.contentWrapper::before{
+    background-color: var(--slate);
+    top:0;
+    left:0;
+    height: 90%;
+    width: 60%;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: -2;
+}
+
+.contentWrapper::after{
+    background-color: var(--brown);
+    top:0;
+    right:0;
+    height: 50%;
+    min-height: 315px;
+    width: 55%;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.textBox{
+    padding:25px 0px;
+}
+.textBox p{
+    max-width: 35ch;
+    font-size: .9rem;
+    margin-bottom: 25px;
+}
+.textBox p:last-of-type{
+    margin-bottom: 0px;
+}
+
+.imgWrapper{
+    position: relative;
+    width: 400px;
+    height: 250px;
+}
