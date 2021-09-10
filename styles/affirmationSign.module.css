@@ -1,0 +1,36 @@
+.wrapper{
+    text-align: center;
+    color: grey;
+    background-color: var(--cream);
+    padding:40px 0px;
+}
+
+.wrapper h3{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.wrapper h5{
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.inputBox{
+    margin-top: 10px;
+    display: flex;
+    gap:2px;
+    justify-content: center;
+}
+.inputBox input{
+    display: block;
+    padding:7px 10px;
+    font-size: .8rem;
+    background: none;
+    border: 1px solid grey;
+    border-radius: 0px;
+    width:26%;
+}
+
+.inputBox button{
+    margin-left: 30px;
+}

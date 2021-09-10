@@ -1,0 +1,42 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, white 10%, var(--slate) 0);
+    padding:0px 25px;
+    padding-bottom: 5px;
+}
+.textBox{
+    margin-top: 8%;
+    color: white;
+}
+
+.textBox h3{
+    font-family: saturday;
+    font-size: 5rem;
+    font-weight: 400;
+    margin-left: 12%;
+}
+
+.textBox p{
+    max-width: 50ch;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.textBox p:last-of-type{
+    margin-bottom: 0;
+}
+
+.textBox button{
+    display: block;
+    padding: 10px 30px;
+    font-size: .8rem;
+    margin:auto;
+    margin-top: 15%;
+}
+
+.imgWrapper{
+    height: 400px;
+    width: 350px;
+    margin-bottom: 5px;
+}

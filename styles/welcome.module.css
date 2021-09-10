@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, white 10%, var(--slate) 0)
+    background: linear-gradient(to right, white 15%, var(--slate) 0)
 }
 
 .contentBox{
@@ -35,7 +35,6 @@
 }
 
 .imagePlaceHolder{
-    background: blue;
     height: 400px;
     width: 350px;
 }

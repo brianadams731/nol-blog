@@ -1,0 +1,19 @@
+.wrapper{
+    position: relative;
+    height: 400px;
+    max-width: 100%;
+}
+.imgOne, .imgTwo{
+    position: absolute;
+    height:95%;
+    width: 90%;
+}
+.imgOne{
+    bottom:0;
+    left:0;
+}
+
+.imgTwo{
+    right: 0;
+    top: 0;
+}
