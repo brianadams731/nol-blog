@@ -1,0 +1,11 @@
+.wrap {
+    background-color: var(--peach);
+    position: relative;
+    min-height: 125px;
+    padding:20px
+}
+
+.copyright {
+    position: absolute;
+    bottom: 20px;
+}

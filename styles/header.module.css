@@ -1,0 +1,30 @@
+
+.nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding:15px 30px;
+}
+
+.accentLine {
+    height: 30px;
+    background-color: var(--peach);
+}
+.no, .ordinary {
+    font-weight: 400;
+}
+
+.self {
+    font-weight: 500;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.navLinks{
+    display: flex;
+    gap: 20px;
+}

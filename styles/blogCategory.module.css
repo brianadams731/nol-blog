@@ -1,0 +1,45 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 15px;
+    padding-top: 20px;
+}
+
+.heroText {
+    font-family: saturday;
+    color: var(--light-brown);
+    transform: translateY(15%);
+    line-height: 0.8;
+    font-size: 5rem;
+    font-weight: 400;
+}
+.catWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.blogCat{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: blue;
+    height: 225px;
+    width: 200px;
+}
+
+.midCat{
+    height: 175px;
+}
+
+.label {
+    background-color: var(--light-brown);
+    text-align: center;
+    padding: 10px;
+    width: 95%;
+    color: white;
+    transform: translateY(15%);
+}

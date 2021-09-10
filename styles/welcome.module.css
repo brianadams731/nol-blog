@@ -1,0 +1,41 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, white 10%, var(--slate) 0)
+}
+
+.contentBox{
+    display: flex;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.contentBox h1{
+    font-family: saturday;
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 0.8;
+    padding-left: 20px;
+}
+
+.altBox {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+
+.subBox{
+    background-color: var(--light-brown);
+    min-width: 95%;
+    padding: 20px 25px;
+}
+.altBox h3{
+    font-weight: 500;
+}
+
+.imagePlaceHolder{
+    background: blue;
+    height: 400px;
+    width: 350px;
+}

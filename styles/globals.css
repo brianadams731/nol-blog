@@ -8,7 +8,7 @@ html,body {
 }
 
 body{
-  background-color: var(--cream);
+  background-color: white;
 }
 
 a {
@@ -16,6 +16,9 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,7 +28,7 @@ a {
 
 :root{
   --cream: #F4F1EA;
-  --pink: #ECD4D2;
+  --peach: #ECD4D2;
   --light-brown: #c8b3a2;
   --brown: #A98D6C;
   --dark-grey: #5C5C5C;
