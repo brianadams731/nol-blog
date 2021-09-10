@@ -1,0 +1,38 @@
+@font-face {
+  font-family: saturday;
+  src: url("../public/Saturday.otf") format("opentype");
+}
+
+html,body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body{
+  background-color: var(--cream);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+:root{
+  --cream: #F4F1EA;
+  --pink: #ECD4D2;
+  --light-brown: #c8b3a2;
+  --brown: #A98D6C;
+  --dark-grey: #5C5C5C;
+  --green: #8A8A7B;
+  --slate: #97A5A7;
+}
+
+.cursive{
+  font-family: saturday;
+}
