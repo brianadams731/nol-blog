@@ -6,10 +6,14 @@ const ImageOverlap = ({imgOne, imgTwo}) =>{
     return (
         <div className={styles.wrapper}>
             <div className={styles.imgTwo}>
-                <Image src={imgTwo} layout="fill" alt="under"/>
+                <div className={styles.imgWrap}>
+                    <Image src={imgTwo} layout="fill" alt="under"/>
+                </div>
             </div>
             <div className={styles.imgOne}>
-                <Image src={imgOne} layout="fill" alt="over"/>
+                <div className={styles.imgWrap}>
+                    <Image src={imgOne} layout="fill" alt="over"/>
+                </div>
             </div>
         </div>
     )
