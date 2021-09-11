@@ -17,6 +17,7 @@
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
     "gray-matter": "^4.0.3",
-    "react-markdown": "^7.0.1"
+    "react-markdown": "^7.0.1",
+    "remark-unwrap-images": "^3.0.0"
   }
 }

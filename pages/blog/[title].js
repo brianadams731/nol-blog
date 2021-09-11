@@ -1,7 +1,8 @@
 import fs from "fs";
 import {join} from "path";
 
-import ReactMarkdown from "react-markdown";
+import BlogPostBody from "../../components/BlogPostBody";
+
 
 export const getStaticPaths = async () =>{
     const postPath = join(process.cwd(), "cms-data/blog-posts")
@@ -32,7 +33,7 @@ const BlogPost = ({fontMatter, content}) =>{
         <>
             <h1>{fontMatter.title}</h1>
             <p>{fontMatter.date}</p>
-            <ReactMarkdown>{content}</ReactMarkdown>
+            <BlogPostBody content={content} />
         </>
     )
 }
