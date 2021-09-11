@@ -3,15 +3,15 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 local_backend: true
 publish_mode: editorial_workflow
-media_folder: cms-data/media
-public_folder: cms-data/media
+media_folder: public/media
+public_folder: ../media
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "cms-data/blog-posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}" # Filename template
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}

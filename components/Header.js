@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Header = () =>{
     return(
-        <header className={styles.wrap}>
+        <header className={styles.wrapper}>
             <nav className={styles.nav}>
                 <div className={styles.headText}>
                     <h3 className={styles.no}>NO</h3>
