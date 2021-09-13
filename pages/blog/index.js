@@ -1,28 +1,33 @@
-import fs from "fs";
-import {join} from "path"
-
+import {getMarkdownName, getMarkdownContent} from "../../components/utils/fileUtils.js";
 import Link from "next/link"
 
 
 export const getStaticProps = async () =>{
-    const postPath = join(process.cwd(), "cms-data/blog-posts")
-    const paths = fs.readdirSync(postPath).map((path) => path.replace(/\.mdx?$/, ''));
+    const paths = getMarkdownName();
+    const fontMatter = paths.map((filePath) => {
+        const {data} = getMarkdownContent(filePath);
+        return {
+            ...data,
+            path: filePath,
+        }
+    })
     return ({
         props: {
-            paths
+            fontMatter
         }
     })
 }
 
 
-const Blog = ({paths}) =>{
+const Blog = ({fontMatter}) =>{
     return (
         <>
-            {paths.map((item,index) =>{
+            {fontMatter.map((item,index) =>{
                 return (
-                    <Link href={`/blog/${item}`} key={index}>
+                    <Link href={`/blog/${item.path}`} key={index}>
                         <div className="pointer">
-                            <h3>{item}</h3>
+                            <h3>{item.title}</h3>
+                            <p>{item.subject}</p>
                         </div>
                     </Link>
                 )
