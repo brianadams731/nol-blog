@@ -64,5 +64,32 @@
 @media screen and (max-width: 550px){
     .contentWrapper{
         flex-direction: column;
+        gap:55px;
+    }
+    .contentWrapper::before, .contentWrapper::after{
+        display:none;
+    }
+
+    .textBox, .imgWrapper{
+        position: relative;
+    }
+
+    .textBox::before, .imgWrapper::before{
+        position: absolute;
+        content:"";
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        z-index: -99;
+    }
+
+    .textBox::before{
+        background-color: var(--slate);
+        height:110%;
+    }
+    .imgWrapper::before{
+        background-color: var(--brown);
+        height:115%;
     }
 }
