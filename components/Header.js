@@ -1,47 +1,38 @@
 import styles from "../styles/header.module.css";
 
-import Link from "next/link";
+import { useEffect, useState } from "react";
+
+import HeaderDesktop from "./HeaderDesktop";
+import HeaderMobile from "./HeaderMobile";
+import useWindowSize from "../hooks/useWindowSize";
+
 
 const Header = () =>{
-    return(
-        <header className={styles.wrapper}>
-            <nav className={styles.nav}>
-                <div className={styles.headText}>
-                    <h3 className={styles.no}>NO</h3>
-                    <h3 className={styles.ordinary}>ORDINARY</h3>
-                    <div className={styles.self}>
-                        <div><h3>S</h3></div>
-                        <div><h3>E</h3></div>
-                        <div><h3>L</h3></div>
-                        <div><h3>F</h3></div>
-                    </div>
+    const windowSize = useWindowSize();
+    const [atTop,setAtTop] = useState(true);
+    const [showMobile,setShowMobile] = useState();
+    const [mobileMenuOpen,setMobileMenuOpen] = useState(false);
 
-                </div>
-                <ul className={styles.navLinks}>
-                    <li>
-                        <Link href="/">
-                            HOME
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/blog">
-                            BLOG
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/story">
-                            MY STORY
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/contact">
-                            CONTACT
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
-            <div className={styles.accentLine}>
-            </div>
+    useEffect(()=>{
+        setShowMobile(window.innerWidth <= 550)
+        setAtTop(!window.pageYOffset);
+        
+        window.onscroll = () =>{
+            setAtTop(!window.pageYOffset);
+        }
+        return ()=> (window.onscroll = null);
+    },[])
+
+    useEffect(()=>{
+        if(windowSize!==undefined){
+            setShowMobile(windowSize.width <= 550)
+        }
+    },[windowSize])
+
+    return(
+        <header className={`${styles.wrapper} ${atTop?styles.grow:styles.shrink}`}>
+            {showMobile?<HeaderMobile mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />:<HeaderDesktop />}
+            <div className={`${styles.accentLine} ${atTop?styles.unQuarter:styles.quarter}`}></div>
         </header>
     )
 }

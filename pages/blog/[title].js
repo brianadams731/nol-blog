@@ -2,6 +2,8 @@ import {getMarkdownName, getMarkdownContent} from "../../components/utils/fileUt
 
 import BlogPostBody from "../../components/BlogPostBody";
 
+import styles from "../../styles/blogSlug.module.css";
+
 
 export const getStaticPaths = async () =>{
     const paths = getMarkdownName().map((title)=> ({params:{title}}));
@@ -23,12 +25,12 @@ export const getStaticProps = async({params}) =>{
 
 
 const BlogPost = ({fontMatter, content}) =>{
+
     return (
-        <>
-            <h1>{fontMatter.title}</h1>
-            <p>{fontMatter.date}</p>
+        <div className={styles.wrapper}>
+            <h1 className={styles.blogTitle}>{fontMatter.title}</h1>
             <BlogPostBody content={content} />
-        </>
+        </div>
     )
 }
 

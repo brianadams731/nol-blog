@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding:0px 25px;
+    padding:0px 45px;
     padding-bottom: 5px;
 }
 
@@ -47,7 +47,33 @@
 }
 
 .imgWrapper{
-    height: 400px;
-    width: 350px;
     margin-bottom: 5px;
+}
+
+@media screen and (max-width:685px){
+    .wrapper{
+        padding: 0px 10px;
+    }
+}
+@media screen and (max-width: 550px){
+    .textBox h3{
+        margin: 0;
+        text-align: center;
+    }
+    .wrapper{
+        flex-direction: column;
+    }
+    .textBox button{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .imgWrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .wrapper:after{
+        height: 100%;
+        width: 100%;
+    }
 }

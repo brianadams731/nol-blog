@@ -6,8 +6,8 @@ const Greeting = () =>{
         <div className={styles.wrapper}>
             <div className={styles.imgWrapper}>
                 <ImageOverlap 
-                    imgTwo="https://source.unsplash.com/random/300x400/?garden"
-                    imgOne="https://source.unsplash.com/random/300x400/?person"
+                    imgTwo="https://source.unsplash.com/random/325x400/?garden"
+                    imgOne="https://source.unsplash.com/random/325x400/?person"
                 />
             </div>
             <div className={styles.textBox}>

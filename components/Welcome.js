@@ -7,8 +7,8 @@ const Welcome = () =>{
             <div className={styles.contentBox}>
                 <div className={styles.imagePlaceHolder}>
                     <ImageOverlap
-                        imgTwo="https://source.unsplash.com/random/350x400/?plants"
-                        imgOne="https://source.unsplash.com/random/350x400/?person" 
+                        imgTwo="https://source.unsplash.com/random/325x400/?plants"
+                        imgOne="https://source.unsplash.com/random/325x400/?person" 
                     />
                 </div>
                 <div className={styles.altBox}>

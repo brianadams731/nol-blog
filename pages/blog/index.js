@@ -1,6 +1,10 @@
 import {getMarkdownName, getMarkdownContent} from "../../components/utils/fileUtils.js";
 import Link from "next/link"
 
+import { useEffect } from "react";
+import { useRouter } from 'next/router'
+
+import {styles} from "../../styles/blogPage.module.css";
 
 export const getStaticProps = async () =>{
     const paths = getMarkdownName();
@@ -20,6 +24,9 @@ export const getStaticProps = async () =>{
 
 
 const Blog = ({fontMatter}) =>{
+    const router = useRouter();
+    const {category} = router.query
+
     return (
         <>
             {fontMatter.map((item,index) =>{

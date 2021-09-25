@@ -1,0 +1,33 @@
+.menuIcon{
+    display: flex;
+    flex-direction: column;
+    width: 25px;
+    gap:5px;
+    transition: all .2s ease-in-out;
+}
+
+.menuIcon:hover{
+    cursor: pointer;
+}
+.menuIcon .line{
+    height: 3px;
+    width:100%;
+    background-color: var(--dark-grey);
+}
+
+.noOrdinary, .self{
+    font-size: 1.2rem;
+}
+.self{
+    color: var(--light-brown);
+}
+
+@keyframes openMenuIcon{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(-90);
+        gap:10px;
+    }
+}

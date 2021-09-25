@@ -60,3 +60,9 @@
     width: 400px;
     height: 250px;
 }
+
+@media screen and (max-width: 550px){
+    .contentWrapper{
+        flex-direction: column;
+    }
+}

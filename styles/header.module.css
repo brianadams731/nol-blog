@@ -1,3 +1,61 @@
+@keyframes shrink{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-40%);
+    }
+}
+.shrink{
+    animation: shrink .2s normal ease-in-out forwards;
+}
+
+@keyframes grow{
+    from{
+        transform: translateY(-40%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+.grow{
+    animation: grow .2s normal ease-in-out forwards;
+}
+
+@keyframes quarter {
+    from {
+        height: 30px;
+    }
+    to{
+        height: 10px;
+    }
+}
+
+@keyframes unQuarter{
+    from{
+        height: 10px;
+    }
+    to{
+        height: 30px;
+    }
+}
+.quarter{
+    animation: quarter .2s normal ease-in-out forwards;
+}
+.unQuarter{
+    animation: unQuarter .2s normal ease-in-out forwards;
+}
+
+
+.wrapper{
+    position: sticky;
+    top:0;
+    background-color: white;
+    z-index: 99999;
+    overflow-x: hidden;
+}
+
 .wrapper ul{
     list-style-type: none;
 }
@@ -19,7 +77,8 @@
     height: 30px;
     background-color: var(--peach);
 }
-.no, .ordinary {
+
+.no, .ordinary, .noOrdinary {
     font-weight: 400;
 }
 

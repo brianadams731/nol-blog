@@ -1,25 +1,23 @@
 .wrapper{
     position: relative;
     height: 400px;
-    max-width: 100%;
+    width: 315px;
 }
+
 .imgOne, .imgTwo{
+    height:375px;
+    width: 300px;
     position: absolute;
-    height:95%;
-    width: 90%;
 }
+
 .imgOne{
     bottom:0;
     left:0;
+    padding-right: 15px;
 }
 
 .imgTwo{
     right: 0;
     top: 0;
-}
-
-.imgWrap{
-    position: relative;
-    width: 100%;
-    height: 100%;
+    padding-left: 15px;
 }

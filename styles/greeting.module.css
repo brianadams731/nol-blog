@@ -7,10 +7,6 @@
     padding:10px 0px;
 }
 
-.imgWrapper{
-    height: 400px;
-    width: 300px;
-}
 
 .textBox{
     color:white
@@ -37,4 +33,22 @@
     height: 90%;
     width: 80%;
     z-index: -1;
+}
+
+@media screen and (max-width: 550px){
+    .wrapper{
+        padding-top: 20px;
+        flex-direction: column;
+        gap:5px
+    }
+    .wrapper::after{
+        height: 100%;
+        width: 100%;
+    }
+    .textBox{
+        padding-bottom: 25px;
+    }
+    .textBox h3{
+        text-align: center;
+    }
 }
