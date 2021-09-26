@@ -20,7 +20,7 @@ const Intro = () =>{
             <div className={styles.imgWrapper}>
                 <ImageOverlap
                     imgTwo="https://source.unsplash.com/random/325x400/?garden"
-                    imgOne="https://source.unsplash.com/random/325x400/?persons"
+                    imgOne="/media/Main 2.jpg"
                 />
             </div>
         </div>

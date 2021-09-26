@@ -3,6 +3,7 @@
     color: grey;
     background-color: var(--cream);
     padding:40px 0px;
+    margin-bottom: 20px;
 }
 
 .wrapper h3{
@@ -38,11 +39,19 @@
 }
 
 @media screen and (max-width:510px) {
-    .inputBox input{
-        width: 200px;
+    .wrapper{
+        padding: 20px;
     }
+
+    .inputBox input{
+        font-size: 1rem;
+        width: 300px;
+    }
+
     .inputBox button{
         margin-top: 5px;
+        padding: 10px 25px;
+        font-size: 1rem;
         margin-left: 0;
     }
 }
@@ -53,6 +62,6 @@
         align-items: center;
     }
     .inputBox input{
-        width: 250px;
+        width: 275px;
     }
 }

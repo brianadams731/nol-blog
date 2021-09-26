@@ -5,11 +5,7 @@ subject: Personal Growth
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper risus in hendrerit gravida rutrum quisque non. Auctor augue mauris augue neque. Sit amet justo donec enim diam vulputate ut pharetra sit. Etiam erat velit scelerisque in dictum non. Sit amet nulla facilisi morbi. Pulvinar mattis nunc sed blandit libero volutpat sed cras. At risus viverra adipiscing at in tellus integer feugiat. Aenean et tortor at risus viverra adipiscing at in. Sit amet risus nullam eget. Eleifend mi in nulla posuere sollicitudin aliquam. Arcu felis bibendum ut tristique et egestas quis.
 
-
-
 ![](../media/leonard-cotte-c1jp-fo53u8-unsplash.jpg)
-
-
 
 Senectus et netus et malesuada. Magna fringilla urna porttitor rhoncus. Mauris a diam maecenas sed enim. Mauris commodo quis imperdiet massa tincidunt nunc. Ipsum consequat nisl vel pretium lectus quam. Volutpat maecenas volutpat blandit aliquam. Cras semper auctor neque vitae. Ullamcorper malesuada proin libero nunc consequat interdum varius sit amet. In hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Vel pretium lectus quam id leo in vitae. Gravida dictum fusce ut placerat orci nulla pellentesque. Tristique sollicitudin nibh sit amet commodo. Adipiscing vitae proin sagittis nisl. Tristique sollicitudin nibh sit amet commodo nulla facilisi. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget. In nisl nisi scelerisque eu ultrices. Ullamcorper a lacus vestibulum sed arcu non odio. Pulvinar elementum integer enim neque volutpat. Et magnis dis parturient montes nascetur ridiculus mus. Urna porttitor rhoncus dolor purus.
 

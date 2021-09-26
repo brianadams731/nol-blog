@@ -14,7 +14,11 @@
     line-height: 0.8;
     font-size: 5rem;
     font-weight: 400;
+    margin-bottom: 40px;
 }
+
+
+
 .catWrapper{
     width: 100%;
     display: flex;
@@ -23,41 +27,6 @@
     flex-wrap: wrap;
 }
 
-.blogCat{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 225px;
-    width: 225px;
-    transition: transform ease-in-out .2s;
-}
-
-.blogCat:hover .label{
-    transform: translateY(15%) scale(1.1);
-}
-
-.blogCat:hover{
-    transform: translateY(-5px) scale(1.05);
-    cursor: pointer;
-}
-
-.midCat{
-    height: 175px;
-}
-
-.label {
-    background-color: var(--light-brown);
-    text-align: center;
-    padding: 10px;
-    width: 95%;
-    color: white;
-    transform: translateY(15%);
-    transition: transform ease-in-out .2s;
-}
-
-.label{
-    font-size: .9rem;
-}
 
 @media screen and (max-width:750px) {
     .heroText{
@@ -65,10 +34,9 @@
         padding-bottom: 15px;
         transform: none;
     }
+    
     .blogCat{
         margin-bottom: 25px;
     }
-    .midCat{
-        height:225px;
-    }
+
 }

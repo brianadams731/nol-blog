@@ -1,39 +1,33 @@
 import styles from "../styles/header.module.css";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
+import {AnimatePresence} from "framer-motion";
 
 import HeaderDesktop from "./HeaderDesktop";
 import HeaderMobile from "./HeaderMobile";
-import useWindowSize from "../hooks/useWindowSize";
+import MobileMenu from "./MobileMenu";
+
+import useIsAtTopOfPage from "../hooks/useIsAtTopOfPage";
+import useShowMobile from "../hooks/useShowMobile";
 
 
 const Header = () =>{
-    const windowSize = useWindowSize();
-    const [atTop,setAtTop] = useState(true);
-    const [showMobile,setShowMobile] = useState();
+    const atTop = useIsAtTopOfPage();
+    const showMobile = useShowMobile(550);
     const [mobileMenuOpen,setMobileMenuOpen] = useState(false);
 
-    useEffect(()=>{
-        setShowMobile(window.innerWidth <= 550)
-        setAtTop(!window.pageYOffset);
-        
-        window.onscroll = () =>{
-            setAtTop(!window.pageYOffset);
-        }
-        return ()=> (window.onscroll = null);
-    },[])
-
-    useEffect(()=>{
-        if(windowSize!==undefined){
-            setShowMobile(windowSize.width <= 550)
-        }
-    },[windowSize])
 
     return(
-        <header className={`${styles.wrapper} ${atTop?styles.grow:styles.shrink}`}>
+        <>
+        <header className={`${styles.wrapper} ${atTop||showMobile?styles.grow:styles.shrink}`}>
             {showMobile?<HeaderMobile mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />:<HeaderDesktop />}
-            <div className={`${styles.accentLine} ${atTop?styles.unQuarter:styles.quarter}`}></div>
+            <div className={`${styles.accentLine}`}></div>
         </header>
+        <AnimatePresence>
+            {mobileMenuOpen&&showMobile?<MobileMenu setMobileMenuOpen={setMobileMenuOpen}/>:null}
+        </AnimatePresence>
+        </>
     )
 }
 export default Header;

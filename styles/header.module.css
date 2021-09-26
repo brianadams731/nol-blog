@@ -54,6 +54,7 @@
     background-color: white;
     z-index: 99999;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .wrapper ul{
@@ -74,7 +75,8 @@
 }
 
 .accentLine {
-    height: 30px;
+    height: 2px;
+    opacity: .6;
     background-color: var(--peach);
 }
 

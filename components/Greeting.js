@@ -7,7 +7,7 @@ const Greeting = () =>{
             <div className={styles.imgWrapper}>
                 <ImageOverlap 
                     imgTwo="https://source.unsplash.com/random/325x400/?garden"
-                    imgOne="https://source.unsplash.com/random/325x400/?person"
+                    imgOne="/media/About 1.jpg"
                 />
             </div>
             <div className={styles.textBox}>

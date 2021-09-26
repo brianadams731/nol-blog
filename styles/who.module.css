@@ -16,34 +16,8 @@
     margin-bottom: 15px;
 }
 
-.contentWrapper::before, .contentWrapper::after{
-    position: absolute;
-    content:"";
-}
-.contentWrapper::before{
-    background-color: var(--slate);
-    top:0;
-    left:0;
-    height: 90%;
-    width: 60%;
-    top:50%;
-    transform: translateY(-50%);
-    z-index: -2;
-}
-
-.contentWrapper::after{
-    background-color: var(--brown);
-    top:0;
-    right:0;
-    height: 50%;
-    min-height: 315px;
-    width: 55%;
-    top:50%;
-    transform: translateY(-50%);
-    z-index: -1;
-}
-
 .textBox{
+    position: relative;
     padding:25px 0px;
 }
 .textBox p{
@@ -61,17 +35,32 @@
     height: 250px;
 }
 
+.textBox::before, .imgWrapper::before{
+    position: absolute;
+    content:"";
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.textBox::before{
+    background-color: var(--slate);
+    z-index: -2;
+    height: 110%;
+    width: 170%;
+}
+
+.imgWrapper::before{
+    background-color: var(--brown);
+    z-index: -1;
+    height:125%;
+    width: 140%;
+}
+
 @media screen and (max-width: 550px){
     .contentWrapper{
         flex-direction: column;
         gap:55px;
-    }
-    .contentWrapper::before, .contentWrapper::after{
-        display:none;
-    }
-
-    .textBox, .imgWrapper{
-        position: relative;
     }
 
     .textBox::before, .imgWrapper::before{
@@ -85,11 +74,9 @@
     }
 
     .textBox::before{
-        background-color: var(--slate);
         height:110%;
     }
     .imgWrapper::before{
-        background-color: var(--brown);
         height:115%;
     }
 }

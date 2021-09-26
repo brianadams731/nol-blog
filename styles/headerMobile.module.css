@@ -10,9 +10,9 @@
     cursor: pointer;
 }
 .menuIcon .line{
-    height: 3px;
+    height: 2px;
     width:100%;
-    background-color: var(--dark-grey);
+    background-color: var(--brown);
 }
 
 .noOrdinary, .self{

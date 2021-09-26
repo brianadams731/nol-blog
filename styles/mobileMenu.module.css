@@ -1,0 +1,32 @@
+.wrapper{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    right:0;
+    top: 0;
+    transform: translateY(0);
+    height:100vh;
+    width:60vw;
+    z-index: 999;
+    background-color: var(--slate);
+    opacity: .9;
+}
+
+.wrapper ul{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    font-size: 2rem;
+    color: white;
+}
+
+
+.wrapper li{
+    list-style-type: none;
+}
+
+.wrapper li:hover{
+    cursor: pointer;
+}
