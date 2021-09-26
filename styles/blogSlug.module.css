@@ -1,5 +1,7 @@
 .wrapper{
-
+    overflow-x: hidden;
+    max-width: 1000px;
+    margin:auto;
 }
 
 .blogTitle{

@@ -1,5 +1,8 @@
 .wrapper{
     padding:25px 0px;
+    overflow-x: hidden;
+    margin:auto;
+    max-width: 1250px;
 }
 
 .title h1{

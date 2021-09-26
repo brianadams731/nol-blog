@@ -9,9 +9,9 @@ const BlogCategory = () =>{
         <div className={styles.wrapper}>
             <h3 className={styles.heroText}>Browse the blog</h3>
             <div className={styles.catWrapper}>
-                <BlogCat image="/media/Mind.jpg" url="/blog/?category=mindset" text="MINDSET"/>
-                <BlogCat image="/media/Personal Growth.jpg" url="/blog/?category=personal-growth" text="PERSONAL GROWTH" />
-                <BlogCat image="/media/Self love.jpg" url="/blog/?category=self-love" text="SELF LOVE"/>
+                <BlogCat image="/media/Mind.jpg" url="/blog/categories/mindset" text="MINDSET"/>
+                <BlogCat image="/media/Personal Growth.jpg" url="/blog/categories/personal-growth" text="PERSONAL GROWTH" />
+                <BlogCat image="/media/Self love.jpg" url="/blog/categories/self-love" text="SELF LOVE"/>
             </div>
         </div>
     )

@@ -3,27 +3,52 @@
     flex-shrink: 0;
 }
 
+.preview:hover{
+    cursor: pointer;
+}
 .textBox{
-    margin-top: 10px;
+    margin-top: 5px;
     text-align: center;
 }
 
 .title{
     font-weight: 500;
     font-size: .9rem;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .description{
     font-size: .8rem;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .readMore{
+    position: relative;
+    width: fit-content;
     color: var(--brown);
     font-size: .9rem;
 }
 
+.readMore::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--brown);
+    transform: scaleX(0);
+    transition: transform ease-in-out .2s;
+}
 .readMore:hover{
     cursor: pointer;
+}
+
+.readMore:hover::before{
+    transform: scaleX(100%);
+}
+
+.readMoreWrapper{
+    margin: auto;
+    width: fit-content;
 }

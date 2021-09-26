@@ -1,11 +1,11 @@
 ---
-title: Lorum Ipsum Other 2
+title: Lorum Ipsum Other
 description: Semper risus in hendrerit gravida rutrum quisque non. Auctor augue
   mauris augue neque. Sit amet justo donec enim diam vulputate ut pharetra sit.
   Etiam erat velit scelerisque in dictum non. Test
-preview: ../media/Mind.jpg
+preview: ../media/leonard-cotte-c1jp-fo53u8-unsplash.jpg
 date: 2021-09-24T21:29:22.116Z
-subject: Self Love
+subject: Mindset
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper risus in hendrerit gravida rutrum quisque non. Auctor augue mauris augue neque. Sit amet justo donec enim diam vulputate ut pharetra sit. Etiam erat velit scelerisque in dictum non. Sit amet nulla facilisi morbi. Pulvinar mattis nunc sed blandit libero volutpat sed cras. At risus viverra adipiscing at in tellus integer feugiat. Aenean et tortor at risus viverra adipiscing at in. Sit amet risus nullam eget. Eleifend mi in nulla posuere sollicitudin aliquam. Arcu felis bibendum ut tristique et egestas quis.
 

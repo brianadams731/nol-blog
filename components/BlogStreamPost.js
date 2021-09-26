@@ -3,13 +3,24 @@ import Image from "next/image";
 import Link from "next/link";
 
 const BlogStreamPost = ({data}) =>{
+
+    // THIS IS A WORK AROUND FOR IMAGE PATH REMOVE IF CONFIG CHANGES OR SWITCHING CMS
+    const previewPath = data.preview?`${data?.preview?.substring(2,data.preview.length)}`:"/"
     return (
         <div className={styles.wrapper} key={"PLACEHOLDER"}>
-            <Image width={250} height={250} src="https://source.unsplash.com/random/300x300" objectFit="cover" alt="blogItem"/>
+            <Link  href={`/blog/${data.path}`}>
+                <div>
+                    <Image className={styles.preview} width={250} height={250} src={previewPath} objectFit="cover" alt="blogItem"/>
+                </div>
+            </Link>
             <div className={styles.textBox}>
-                <h2 className={styles.title}>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-                <p className={styles.description}>laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.</p>
-                <Link href={"/"} ><h6 className={styles.readMore}>READ MORE</h6></Link>
+                <h2 className={styles.title}>{data.title}</h2>
+                <p className={styles.description}>{data.description}</p>
+                <Link href={`/blog/${data.path}`}>
+                    <div className={styles.readMoreWrapper}>
+                        <h6 className={styles.readMore}>READ MORE</h6>
+                    </div>
+                </Link>
             </div>
         </div>
     )

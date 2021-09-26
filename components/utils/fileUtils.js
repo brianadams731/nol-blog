@@ -2,6 +2,7 @@ import fs from "fs"
 import { extname,join } from "path";
 
 export const getMarkdownName = () =>{
+    const fs = require("fs")
     const postPath = join(process.cwd(), "cms-data/blog-posts");
     const filePaths = fs.readdirSync(postPath).map((fileName) => {
         if(extname(fileName) === ".md"){
