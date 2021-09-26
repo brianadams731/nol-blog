@@ -9,7 +9,7 @@ const BlogStreamPost = ({data}) =>{
     return (
         <div className={styles.wrapper} key={"PLACEHOLDER"}>
             <Link  href={`/blog/${data.path}`}>
-                <div>
+                <div className={styles.previewWrapper}>
                     <Image className={styles.preview} width={250} height={250} src={previewPath} objectFit="cover" alt="blogItem"/>
                 </div>
             </Link>

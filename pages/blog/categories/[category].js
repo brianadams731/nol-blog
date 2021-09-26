@@ -1,6 +1,8 @@
 import { getMarkdownContent,getMarkdownName} from "../../../components/utils/fileUtils.js";
 import {categoryURLParser } from "../../../components/utils/pathUtils.js" 
 
+import { motion } from "framer-motion";
+
 import BlogStreamPost from "../../../components/BlogStreamPost.js";
 
 import styles from "../../../styles/categorySlug.module.css";
@@ -53,14 +55,14 @@ export const getStaticProps = async({params}) =>{
     })
 }
 
-const CategoryPage = ({category, data}) =>{
+const CategoryPage = ({category, data, variants}) =>{
     return (
-        <div className={styles.wrapper}>
+        <motion.div className={styles.wrapper} initial="initialFadeIn" animate="animatedFadeIn" exit="initialFadeIn" key={category} variants={variants}>
             <h1 className={styles.title}>Category: {category}</h1>
-            {data.map((item)=>{
-                return <BlogStreamPost data={item} />
+            {data.map((item,index)=>{
+                return <BlogStreamPost data={item} key={index}/>
             })}
-        </div>
+        </motion.div>
     )
 }
 

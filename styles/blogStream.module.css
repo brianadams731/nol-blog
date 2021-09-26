@@ -7,7 +7,7 @@
     width: clamp(350px, 60%, 100%);
     min-height: 115px;
     padding-top: 15px;
-    transform: translateY(55px);
+    transform: translate(10px, 55px);
 }
 
 .left{
@@ -26,6 +26,7 @@
     background-color: var(--light-brown);
     text-align: right;
     margin-left: auto;
+    transform: translate(-10px, 55px);
 }
 
 .right h3{
@@ -62,4 +63,8 @@
     display: flex;
     gap:40px;
     overflow: auto;
+}
+
+.pushRight{
+    justify-content: end;
 }

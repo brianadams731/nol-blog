@@ -52,3 +52,7 @@
     margin: auto;
     width: fit-content;
 }
+
+.previewWrapper:hover + .textBox .readMore::before{
+    transform: scaleX(100%);
+}

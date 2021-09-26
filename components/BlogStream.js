@@ -14,8 +14,7 @@ const BlogStream = ({category,data,left}) =>{
                     <Link href={`/blog/categories/${categoryURLParser(category)}`}><h3>{category}</h3></Link>
                 </div>
             </div>
-            <div className={styles.postWrapper}>
-                
+            <div className={`${styles.postWrapper} ${left?"":styles.pushRight}`}>
                 {data.map((item)=>{
                     return <BlogStreamPost key={item.title} data={item} />
                 })}

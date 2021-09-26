@@ -1,5 +1,4 @@
 import styles from "../styles/blogCategory.module.css";
-import Link from "next/link"
 
 import BlogCat from "./BlogCat.js";
 
