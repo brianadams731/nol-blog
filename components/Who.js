@@ -14,7 +14,7 @@ const Who = () =>{
                     <p>Aliquam vestibulum morbi blandit cursus risus. Morbi tristique senectus et netus et malesuada fames. Ullamcorper sit amet risus nullam.</p>
                 </div>
                 <div className={styles.imgWrapper}>
-                    <Image layout="fill" alt="Author" objectFit="cover" src="/media/About 2.jpg"/>
+                    <Image height={250} width={400} alt="Author" objectFit="cover" src="/media/About 2.jpg"/>
                 </div>
             </div>
         </>

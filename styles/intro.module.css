@@ -42,7 +42,7 @@
 .textBox button{
     display: block;
     padding: 10px 30px;
-    font-size: .8rem;
+    font-size: 1.1rem;
     margin:auto;
     margin-top: 7%;
 }
@@ -66,12 +66,13 @@
     }
     .textBox button{
         margin-top: 15px;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
     .imgWrapper{
         display: flex;
         align-items: center;
         justify-content: center;
+        transform: translateY(5%);
     }
     .wrapper:after{
         height: 100%;

@@ -1,8 +1,10 @@
 import Link from "next/link";
 
+import { useRouter } from "next/router";
 import styles from "../styles/header.module.css";
 
 const HeaderDesktop = () =>{
+    const router = useRouter();
 
     return (
         <>
@@ -19,17 +21,17 @@ const HeaderDesktop = () =>{
                 </div>
 
                 <ul className={styles.navLinks}>
-                    <li>
+                    <li style={{color:router.pathname ==="/"?"var(--brown)":"black"}}>
                         <Link href="/">
                             HOME
                         </Link>
                     </li>
-                    <li>
+                    <li style={{color:router.pathname.includes("blog")?"var(--brown)":"black"}}>
                         <Link href="/blog">
                             BLOG
                         </Link>
                     </li>
-                    <li>
+                    <li style={{color:router.pathname ==="/story"?"var(--brown)":"black"}}>
                         <Link href="/story">
                             MY STORY
                         </Link>

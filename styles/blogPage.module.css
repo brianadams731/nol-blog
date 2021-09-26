@@ -1,3 +1,11 @@
 .wrapper{
-    
+    padding:25px 0px;
+}
+
+.title h1{
+    font-family: saturday;
+    color: var(--brown);
+    font-size: 6rem;
+    font-weight: 400;
+    text-align: center;
 }

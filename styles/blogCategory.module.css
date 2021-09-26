@@ -33,10 +33,11 @@
         padding-top:15px;
         padding-bottom: 15px;
         transform: none;
+        margin-bottom: 20px;
     }
     
     .blogCat{
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 
 }
