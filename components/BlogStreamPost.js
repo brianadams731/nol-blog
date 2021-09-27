@@ -2,14 +2,36 @@ import styles from "../styles/blogStreamPost.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
+import {motion} from 'framer-motion';
 import PropTypes from "prop-types";
 
+import useElementInViewport from "../hooks/useElementInViewport";
+
 const BlogStreamPost = ({data, dragging}) =>{
+
+    const [elementRef, elementInViewport] = useElementInViewport(true,.5);
+
+    const variants = {
+        init:{
+            opacity:0,
+            y:10,
+            transition:{
+                delay: 0,
+            }
+        },
+        shown:{
+            opacity:1,
+            y:0,
+            transition:{
+                delay: .1,
+            }
+        }
+    }
 
     // THIS IS A WORK AROUND FOR IMAGE PATH REMOVE IF CONFIG CHANGES OR SWITCHING CMS
     const previewPath = data.preview?`${data?.preview?.substring(2,data.preview.length)}`:"/"
     return (
-        <div style={{pointerEvents:dragging?"none":"auto"}} className={styles.wrapper} key={"PLACEHOLDER"}>
+        <motion.div  initial="init" animate={elementInViewport?"shown":""} variants={variants} ref={elementRef} style={{pointerEvents:dragging?"none":"auto"}} className={styles.wrapper} key={"PLACEHOLDER"}>
             <Link  href={`/blog/${data.path}`}>
                 <div className={styles.previewWrapper}>
                     <Image className={styles.preview} width={250} height={250} src={previewPath} objectFit="cover" alt="blogItem"/>
@@ -24,7 +46,7 @@ const BlogStreamPost = ({data, dragging}) =>{
                     </div>
                 </Link>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

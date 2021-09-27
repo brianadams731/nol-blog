@@ -1,5 +1,7 @@
 import { useState,useEffect } from "react";
 
+// @params: breakPoint: integer - Number representing which value that the view port needs to be <= to set showMobile true
+// @returns: boolean: bool value that represents if window is <= breakpoint
 
 const useShowMobile = (breakPoint) =>{
     const [showMobile,setShowMobile] = useState();

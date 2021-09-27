@@ -1,5 +1,7 @@
 import {useState ,useEffect } from "react";
 
+// @ returns: atTop: boolean - boolean value whither or not viewport is at the top of the page
+
 const useIsAtTopOfPage = () =>{
     const [atTop, setAtTop] = useState()
 

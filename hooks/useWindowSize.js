@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
 
+// @returns: windowSize: object{width:int,height:int} - Object that contains the window width and height, changes on resize
+
 const getWindowSize = () =>{
     const { innerWidth: width, innerHeight: height } = window;
     return {
