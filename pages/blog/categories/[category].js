@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import BlogStreamPost from "../../../components/BlogStreamPost.js";
 
 import styles from "../../../styles/categorySlug.module.css";
+import BlogPostReel from "../../../components/BlogPostReel.js";
 
 export const getStaticPaths = async () =>{
     const paths = [];
@@ -47,21 +48,42 @@ export const getStaticProps = async({params}) =>{
         }            
     })
 
+    let even = true;
+    let i = 0;
+    const dataMatrix = []
+    while(i<data.length){
+        if(even){
+            dataMatrix.push(data.slice(i,i+2));
+            i = i+2
+        }else{
+            dataMatrix.push(data.slice(i,i+3));
+            i = i+3;
+        }
+        even = !even;
+    }
+
     return ({
         props:{
             category:data[0]?.subject,
-            data,
+            dataMatrix:dataMatrix,
         }
     })
 }
 
-const CategoryPage = ({category, data, variants}) =>{
+const CategoryPage = ({category, dataMatrix, variants}) =>{
+
+
     return (
         <motion.div className={styles.wrapper} initial="initialFadeIn" animate="animatedFadeIn" exit="initialFadeIn" key={category} variants={variants}>
             <h1 className={styles.title}>Category: {category}</h1>
-            {data.map((item,index)=>{
-                return <BlogStreamPost data={item} key={index}/>
-            })}
+            <div className={styles.headWrapper}>
+                <h3 className={styles.headText}>Latest Posts</h3>
+            </div>
+            <div className={styles.blogReelSection}>
+                {dataMatrix.map((dataArray, index) =>{
+                    return <BlogPostReel data={dataArray} key={index}/>
+                })}
+            </div>
         </motion.div>
     )
 }

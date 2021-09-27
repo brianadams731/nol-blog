@@ -2,12 +2,14 @@ import styles from "../styles/blogStreamPost.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const BlogStreamPost = ({data}) =>{
+import PropTypes from "prop-types";
+
+const BlogStreamPost = ({data, dragging}) =>{
 
     // THIS IS A WORK AROUND FOR IMAGE PATH REMOVE IF CONFIG CHANGES OR SWITCHING CMS
     const previewPath = data.preview?`${data?.preview?.substring(2,data.preview.length)}`:"/"
     return (
-        <div className={styles.wrapper} key={"PLACEHOLDER"}>
+        <div style={{pointerEvents:dragging?"none":"auto"}} className={styles.wrapper} key={"PLACEHOLDER"}>
             <Link  href={`/blog/${data.path}`}>
                 <div className={styles.previewWrapper}>
                     <Image className={styles.preview} width={250} height={250} src={previewPath} objectFit="cover" alt="blogItem"/>
@@ -24,6 +26,14 @@ const BlogStreamPost = ({data}) =>{
             </div>
         </div>
     )
+}
+
+BlogStreamPost.defaultProps = {
+    dragging: false,
+};
+
+BlogStreamPost.propTypes = {
+    dragging: PropTypes.bool,
 }
 
 export default BlogStreamPost;

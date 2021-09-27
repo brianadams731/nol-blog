@@ -1,6 +1,23 @@
 .wrapper{
-    padding: 50px 0px;
+    padding: 50px 25px;
+    overflow-x: hidden;
+    max-width: 1100px;
+    margin:auto;
 }
+
+.headWrapper{
+    width: clamp(350px, 50%, 100%);
+    min-height: 115px;
+    transform: translate(10px, 55px);
+    background-color: var(--slate);
+    padding: 15px; 
+}
+
+.headText{
+    font-size: 2rem;
+    color: white;
+}
+
 .title{
     font-family: saturday;
     font-size: 6rem;

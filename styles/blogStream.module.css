@@ -1,5 +1,14 @@
 .wrapper{
     margin-bottom: 20px;
+    padding: 10px;
+}
+
+.wrapper img{
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
 }
 
 .category{
@@ -62,7 +71,8 @@
 .postWrapper{
     display: flex;
     gap:40px;
-    overflow: auto;
+    overflow: visible;
+    width: fit-content;
 }
 
 .pushRight{

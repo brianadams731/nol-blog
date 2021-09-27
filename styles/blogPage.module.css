@@ -1,6 +1,6 @@
 .wrapper{
     padding:25px 0px;
-    overflow-x: hidden;
+    overflow-x: visible;
     margin:auto;
     max-width: 1250px;
 }
