@@ -1,22 +1,58 @@
 import Link from "next/link";
 
 import { useRouter } from "next/router";
+import {AnimatePresence, motion} from "framer-motion";
+
 import styles from "../styles/header.module.css";
 
-const HeaderDesktop = () =>{
-    const router = useRouter();
+const HeaderDesktop = ({atTop}) =>{
 
+    const variants = {
+        init :{
+            opacity: 0,
+            transition:{
+                duration:.4
+            },
+        },
+
+        animated:{
+            opacity:1,
+            transition:{
+                duration:1
+            },
+        }
+    }
+
+    const labelSwitch = () =>{
+        if(atTop){
+            return(
+                <motion.div variants={variants} initial="init" animate="animated" className={styles.self} key="self">
+                    <div><h3>S</h3></div>
+                    <div><h3>E</h3></div>
+                    <div><h3>L</h3></div>
+                    <div><h3>F</h3></div>
+                </motion.div>
+            )
+        }else{
+            return(
+                <motion.div variants={variants} initial="init" animate="animated" key="not-self">
+                    <h3 style={{color:"black", fontWeight:400}}>NO ORDINARY <span style={{color:"var(--light-brown)"}}>SELF</span></h3>
+                </motion.div>
+            )
+        }
+    }
+
+    const router = useRouter();
     return (
-        <>
+        <div className={styles.deskWrapper}>
             <nav className={styles.nav}>
                 <div className={styles.headText}>
-                    <h3 className={styles.no}>NO</h3>
-                    <h3 className={styles.ordinary}>ORDINARY</h3>
-                    <div className={styles.self}>
-                        <div><h3>S</h3></div>
-                        <div><h3>E</h3></div>
-                        <div><h3>L</h3></div>
-                        <div><h3>F</h3></div>
+                    <motion.h3 variants={variants} initial="initial" animate={atTop?"animated":"init"} className={styles.no}>NO</motion.h3>
+                    <motion.h3 variants={variants} initial="initial" animate={atTop?"animated":"init"} className={styles.ordinary}>ORDINARY</motion.h3>
+                    <div className={styles.selfWrap}>
+                        <AnimatePresence exitBeforeEnter>
+                            {labelSwitch()}
+                        </AnimatePresence>
                     </div>
                 </div>
 
@@ -43,7 +79,7 @@ const HeaderDesktop = () =>{
                     </li>*/}
                 </ul>
             </nav>
-        </>
+        </div>
     )
 }
 

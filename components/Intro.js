@@ -8,10 +8,13 @@ const Intro = () =>{
             <div className={styles.textBox}>
                 <h3>Hi! I&apos;m Naka</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                    I am the blogger behind No Ordinary Self. My goal is to help you transform your
+                    mind for success and become your ultimate best self! I am on the mission to remove any
+                    boundaries you and I, create in our minds of who we are and of what we can become.
                 </p>
                 <p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                If you are looking for a mindset boost, tips on how to become extraordinary, and develop more
+                self-love, look no more. I got you, sis!
                 </p>
                 <Link href="/story">
                     <button>GET TO KNOW ME</button>

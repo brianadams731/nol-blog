@@ -1,7 +1,7 @@
 import styles from "../styles/header.module.css";
 
 import { useState } from "react";
-
+import {motion} from "framer-motion";
 import {AnimatePresence} from "framer-motion";
 
 import HeaderDesktop from "./HeaderDesktop";
@@ -20,10 +20,10 @@ const Header = () =>{
 
     return(
         <>
-        <header className={`${styles.wrapper} ${atTop||showMobile?styles.grow:styles.shrink}`}>
-            {showMobile?<HeaderMobile mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />:<HeaderDesktop />}
+        <motion.header className={styles.wrapper} initial={{y:atTop||showMobile?0:"-45%"}} animate={{y:atTop||showMobile?0:"-45%"}} transition={{type:"tween", duration:.4}}>
+            {showMobile?<HeaderMobile mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />:<HeaderDesktop atTop={atTop}/>}
             <div className={`${styles.accentLine}`}></div>
-        </header>
+        </motion.header>
         <AnimatePresence>
             {mobileMenuOpen&&showMobile?<MobileMenu setMobileMenuOpen={setMobileMenuOpen}/>:null}
         </AnimatePresence>
