@@ -44,3 +44,16 @@
     background-color: var(--slate);
     z-index: -999;
 }
+
+@media screen and (max-width:775px){
+    .contentWrapper{
+        flex-direction: column-reverse;
+        gap:20px;
+        padding: 15px 30px;
+    }
+    .contentWrapper::before{
+        bottom: 0%;
+        top:0%;
+        width: 100%;
+    }
+}
