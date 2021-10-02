@@ -12,3 +12,9 @@
     font-weight: 400;
     text-align: center;
 }
+
+@media screen and (max-width:550px) {
+    .wrapper{
+        overflow-x: hidden;
+    }
+}

@@ -4,7 +4,7 @@ import Welcome from '../components/Welcome.js';
 import AffirmationSign from "../components/AffirmationSign.js";
 import Intro from "../components/Intro.js";
 
-import styles from "../styles/home.module.css";
+import styles from "../styles/Home.module.css";
 import {motion} from "framer-motion";
 
 export default function Home({variants}) {

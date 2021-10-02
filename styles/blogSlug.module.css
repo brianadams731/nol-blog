@@ -6,9 +6,10 @@
 
 .blogTitle{
     font-family: saturday;
-    font-size: 8rem;
+    font-size: 7rem;
     font-weight: 400;
     text-align: center;
     margin-top: 35px;
     margin-bottom: 35px;
+    color: var(--brown);
 }

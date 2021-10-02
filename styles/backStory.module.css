@@ -1,0 +1,24 @@
+.header{
+    font-size: 5rem;
+    color: var(--brown);
+    font-family: saturday;
+    font-weight: 400;
+    text-align: center;
+}
+
+.headerWrapper{
+
+}
+
+.textBox{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0px;
+}
+
+.textBox p{
+    display: block;
+}

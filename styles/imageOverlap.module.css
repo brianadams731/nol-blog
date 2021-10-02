@@ -1,18 +1,15 @@
 .wrapper{
     position: relative;
-    height: 400px;
-    width: 315px;
 }
 
 .imgOne, .imgTwo{
-    height:375px;
-    width: 300px;
     position: absolute;
 }
 
 .imgOne{
     bottom:0;
     left:0;
+    padding-top: 15px;
     padding-right: 15px;
 }
 

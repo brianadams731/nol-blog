@@ -2,7 +2,7 @@
 title: Lorum Ipsum Other 2
 description: Semper risus in hendrerit gravida rutrum quisque non. Auctor augue
   mauris augue neque. Sit amet justo donec enim diam vulputate ut pharetra sit.
-  Etiam erat velit scelerisque in dictum non. Test
+  Etiam erat velit scelerisque in dictum non.
 preview: ../media/Mind.jpg
 date: 2021-09-24T21:29:22.116Z
 subject: Self Love
