@@ -6,23 +6,74 @@ import {motion} from "framer-motion";
 const HeaderMobile = ({mobileMenuOpen, setMobileMenuOpen}) =>{
 
 
-    const icon = {
-        init: {
-            transform:"rotate(0deg)"},
-            
-        close:{
-            transform:"rotate(0deg)",
+
+
+    const upperLine = {
+        init:{
+            top:0,
+            rotate:0,
+            translateY:0,
             transition:{
-                type:"tween",duration:.02
-            },
+                top:{
+                    delay:.4,
+                },
+                translateY:{
+                    delay:.4,
+                }
+            }
         },
 
-        open: {
-            transform:"rotate(90deg)",
+        animate:{
+            top:"50%",
+            rotate:45,
+            translateY:"-50%",
             transition:{
-                type:"tween",duration:.02
-            },
+                rotate:{
+                    delay:.4,
+                },
+            }
         },
+    }
+
+    const lowerLine = {
+        init:{
+            bottom:0,
+            rotate:0,
+            translateY:0,
+            transition:{
+                bottom:{
+                    delay:.4,
+                },
+                translateY:{
+                    delay:.4,
+                }
+            }
+        },
+
+        animate:{
+            bottom:"50%",
+            rotate:-45,
+            translateY:"50%",
+            transition:{
+                rotate:{
+                    delay:.4,
+                },
+            }
+        },
+
+    }
+
+    const middleLine = {
+        init:{
+            opacity:1
+        },
+        animate:{
+            opacity:0,
+            transition:{
+                duration:.1,
+                delay:.2,
+            }
+        }
     }
 
     return(
@@ -33,13 +84,13 @@ const HeaderMobile = ({mobileMenuOpen, setMobileMenuOpen}) =>{
                         <h3 className={`${sharedStyles.noOrdinary} ${styles.noOrdinary}`}>NO ORDINARY <span className={styles.self}>SELF</span></h3>
                     </div>
         
-                    <motion.div className={styles.menuIcon} variants={icon} initial="init" animate={mobileMenuOpen?"open":"close"} onClick={()=>{
+                    <div className={styles.menuIcon} onClick={()=>{
                         setMobileMenuOpen(prev => !prev);
                     }}>
-                        <div className={styles.line}></div>
-                        <div className={styles.line}></div>
-                        <div className={styles.line}></div>
-                    </motion.div>
+                        <motion.div initial="init" animate={mobileMenuOpen?"animate":"init"} variants={upperLine} className={styles.lineTop}></motion.div>
+                        <motion.div initial="init" animate={mobileMenuOpen?"animate":"init"} variants={middleLine} className={styles.lineMiddle}></motion.div>
+                        <motion.div initial="init" animate={mobileMenuOpen?"animate":"init"} variants={lowerLine} className={styles.lineBottom}></motion.div>
+                    </div>
                 
                 </nav>
             </>

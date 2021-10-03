@@ -1,33 +1,37 @@
 .menuIcon{
-    display: flex;
-    flex-direction: column;
+    position: relative;
     width: 25px;
-    gap:5px;
-    transition: all .2s ease-in-out;
+    height: 20px;
+}
+
+.lineTop, .lineMiddle, .lineBottom{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--brown);
+}
+
+.lineTop{
+    top:0;
+}
+
+.lineMiddle{
+    transform: translate(0, -50%);
+    top:50%;
+}
+
+.lineBottom{
+    bottom:0;
 }
 
 .menuIcon:hover{
     cursor: pointer;
 }
-.menuIcon .line{
-    height: 2px;
-    width:100%;
-    background-color: var(--brown);
-}
+
 
 .noOrdinary, .self{
     font-size: 1.2rem;
 }
 .self{
     color: var(--light-brown);
-}
-
-@keyframes openMenuIcon{
-    from{
-        transform: rotate(0);
-    }
-    to{
-        transform: rotate(-90);
-        gap:10px;
-    }
 }
