@@ -12,14 +12,10 @@ const HeaderMobile = ({mobileMenuOpen, setMobileMenuOpen}) =>{
         init:{
             top:0,
             rotate:0,
-            translateY:0,
             transition:{
                 top:{
                     delay:.4,
                 },
-                translateY:{
-                    delay:.4,
-                }
             }
         },
 
@@ -39,14 +35,10 @@ const HeaderMobile = ({mobileMenuOpen, setMobileMenuOpen}) =>{
         init:{
             bottom:0,
             rotate:0,
-            translateY:0,
             transition:{
                 bottom:{
                     delay:.4,
                 },
-                translateY:{
-                    delay:.4,
-                }
             }
         },
 
