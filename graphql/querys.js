@@ -1,9 +1,11 @@
 //Graphql Playground https://qgu1tf9c.api.sanity.io/v1/graphql/production/default
+// IF THE GRAPHQL CLIENT CHANGES REMOVE gql BEFORE QUERY!
+import {gql} from "graphql-request";
 
 const endpoint = `https://qgu1tf9c.apicdn.sanity.io/v1/graphql/production/default`
 
 const getAllPostsWithDetails = () =>{
-    return (`
+    return (gql`
         {
             allPost(sort: [{ _createdAt: ASC }]) {
                 title
@@ -23,8 +25,20 @@ const getAllPostsWithDetails = () =>{
       `)
 }
 
+const getAllSlugs = () =>{
+    return (gql`
+        {
+            allPost{
+                blogPostSlug{
+                    current
+                }
+            }
+        }
+    `)
+}
+
 const getPostWithDetailFromSlug = (slug) =>{
-    return (`
+    return (gql`
         {
             allPost(where: {blogPostSlug: {current:{eq:"${slug}"}}}) {
                 title
@@ -45,7 +59,7 @@ const getPostWithDetailFromSlug = (slug) =>{
 }
 
 const getAllBlogPreviews = () =>{
-    return(`
+    return(gql`
     {
         allPost(sort: [{ _createdAt: ASC }]) {
             title
@@ -65,7 +79,7 @@ const getAllBlogPreviews = () =>{
 }
 
 const getBlogPreviewBySubject = (subject) =>{
-    return (`
+    return (gql`
         {
             allPost(sort: [{ _createdAt: ASC }], where: {subject:{eq:"${subject}"}}) {
                 title
@@ -85,7 +99,7 @@ const getBlogPreviewBySubject = (subject) =>{
 }
 
 const getAllBlogSubjects = () =>{
-    return(`
+    return(gql`
         {
             allPost{
                 subject
@@ -96,7 +110,8 @@ const getAllBlogSubjects = () =>{
 
 export {
     endpoint, 
-    getAllPostsWithDetails, 
+    getAllPostsWithDetails,
+    getAllSlugs, 
     getPostWithDetailFromSlug,
     getAllBlogPreviews,
     getBlogPreviewBySubject,

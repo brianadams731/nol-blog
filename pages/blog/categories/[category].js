@@ -1,30 +1,26 @@
-import { getMarkdownContent,getMarkdownName} from "../../../components/utils/fileUtils.js";
 import {categoryURLParser } from "../../../components/utils/pathUtils.js" 
 
-import { motion } from "framer-motion";
+import {getAllBlogSubjects, getBlogPreviewBySubject, endpoint } from "../../../graphql/querys.js";
+import { previewAdapter, deURLBlogSubject } from "../../../graphql/adapters.js";
+import {request} from "graphql-request";
 
-import BlogStreamPost from "../../../components/BlogStreamPost.js";
+import { motion } from "framer-motion";
 
 import styles from "../../../styles/categorySlug.module.css";
 import BlogPostReel from "../../../components/BlogPostReel.js";
 
 export const getStaticPaths = async () =>{
     const paths = [];
-    const titles = getMarkdownName();
-    const mdGreyMatter = titles.map(item =>{
-        const {data} = getMarkdownContent(item)
-        return data.subject;
-    })
-    
-    mdGreyMatter.forEach((item) =>{
-        const subject = categoryURLParser(item);
+    const slugs = await request(endpoint,getAllBlogSubjects());
+    slugs.allPost.map((item)=>{
+        const subject = categoryURLParser(item.subject);
         if(!paths.includes(subject)){
             paths.push({
-                params: {category: subject}
+                params: {category: subject},
             });
         }
     })
-    
+
     return ({
         paths,
         fallback: false
@@ -32,21 +28,10 @@ export const getStaticPaths = async () =>{
 }
 
 export const getStaticProps = async({params}) =>{
-    const data = [];
-    const paths = getMarkdownName();
-    const mdGreyMatter = paths.map(pathName =>{
-        const {data} = getMarkdownContent(pathName)
-        return {
-            ...data,
-            path: pathName,
-        };
-    })
-    
-    mdGreyMatter.forEach((item) =>{
-        if(categoryURLParser(item.subject) === params.category){
-            data.push(item);
-        }            
-    })
+    const subject = deURLBlogSubject(params.category)
+    const unparsedPreviews = await request(endpoint,getBlogPreviewBySubject(subject));
+    const data = previewAdapter(unparsedPreviews);
+
 
     let even = true;
     let i = 0;

@@ -1,24 +1,26 @@
-import {getMarkdownName, getMarkdownContent} from "../../components/utils/fileUtils.js";
+import { endpoint, getAllBlogPreviews } from "../../graphql/querys.js";
+import {previewAdapter} from "../../graphql/adapters.js"
+import {request} from "graphql-request";
 
 import {motion} from "framer-motion";
 import styles from "../../styles/blogPage.module.css";
 import BlogStream from "../../components/BlogStream.js";
 
-export const getStaticProps = async () =>{
-    const paths = getMarkdownName();
-    const fontMatter = paths.map((filePath) => {
-        const {data} = getMarkdownContent(filePath);
-        return {
-            ...data,
-            path: filePath,
-        }
-    })
 
+export const getStaticProps = async () =>{
+
+    const getAllPostPreviews= async() =>{
+        const previews = await request(endpoint,getAllBlogPreviews());
+        const parsedPreviews = previewAdapter(previews);
+        return parsedPreviews;
+    }
+
+    const posts = await getAllPostPreviews();
     const mindset = [];
     const personalGrowth = [];
     const selfLove = []
 
-    fontMatter.forEach((item) =>{
+    posts.forEach((item) =>{
         const subject = item.subject.toLowerCase();
         if(subject === "mindset"){
             mindset.push(item);

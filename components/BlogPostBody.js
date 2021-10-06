@@ -1,14 +1,11 @@
 import styles from "../styles/blogPostBody.module.css";
+const BlockContent = require('@sanity/block-content-to-react');
 
-import ReactMarkdown from "react-markdown";
-import remarkUnwrapImages from "remark-unwrap-images";
 
 const BlogPostBody = ({content}) =>{
     return (
         <div className={styles.wrapper}>
-            <ReactMarkdown remarkPlugins={[remarkUnwrapImages]} >
-                {content}
-            </ReactMarkdown>
+            <BlockContent blocks={content} projectId="qgu1tf9c" dataset="production" />
         </div>
     )
 }

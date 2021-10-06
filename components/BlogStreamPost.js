@@ -28,13 +28,11 @@ const BlogStreamPost = ({data, dragging}) =>{
         }
     }
 
-    // THIS IS A WORK AROUND FOR IMAGE PATH REMOVE IF CONFIG CHANGES OR SWITCHING CMS
-    const previewPath = data.preview?`${data?.preview?.substring(2,data.preview.length)}`:"/"
     return (
         <motion.div  initial="init" animate={elementInViewport?"shown":""} variants={variants} ref={elementRef} style={{pointerEvents:dragging?"none":"auto"}} className={styles.wrapper} key={"PLACEHOLDER"}>
             <Link  href={`/blog/${data.path}`}>
                 <div className={styles.previewWrapper}>
-                    <Image className={styles.preview} width={250} height={250} src={previewPath} objectFit="cover" alt="blogItem"/>
+                    <Image className={styles.preview} width={250} height={250} src={data?.preview} objectFit="cover" alt="blogItem"/>
                 </div>
             </Link>
             <div className={styles.textBox}>
