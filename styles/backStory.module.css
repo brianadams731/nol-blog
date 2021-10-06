@@ -6,10 +6,6 @@
     text-align: center;
 }
 
-.headerWrapper{
-
-}
-
 .textBox{
     display: flex;
     flex-direction: column;
