@@ -2,7 +2,11 @@
 // IF THE GRAPHQL CLIENT CHANGES REMOVE gql BEFORE QUERY!
 import {gql} from "graphql-request";
 
-const endpoint = `https://qgu1tf9c.apicdn.sanity.io/v1/graphql/production/default`
+const sanityProjectID = `qgu1tf9c`;
+const sanityDataset = `production`;
+const sanityTag = `default`
+
+const endpoint = `https://${sanityProjectID}.apicdn.sanity.io/v1/graphql/${sanityDataset}/${sanityTag}`
 
 const getAllPostsWithDetails = () =>{
     return (gql`
@@ -109,11 +113,14 @@ const getAllBlogSubjects = () =>{
 }
 
 export {
-    endpoint, 
+    endpoint,
+    sanityDataset,
+    sanityProjectID,
+    sanityTag, 
     getAllPostsWithDetails,
     getAllSlugs, 
     getPostWithDetailFromSlug,
     getAllBlogPreviews,
     getBlogPreviewBySubject,
-    getAllBlogSubjects
+    getAllBlogSubjects,
 };
