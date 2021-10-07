@@ -2,6 +2,7 @@ import Greeting from "../components/Greeting.js";
 import Who from "../components/Who.js";
 
 import About from "../components/About.js";
+import Contact from "../components/Contact.js";
 import AffirmationSign from "../components/AffirmationSign.js";
 
 import styles from "../styles/storyPage.module.css"
@@ -15,7 +16,7 @@ const Story = ({variants}) =>{
             <About />
             <GetToKnow />
             <BackStory />
-            <AffirmationSign />
+            <Contact />
         </motion.div>
     )
 }

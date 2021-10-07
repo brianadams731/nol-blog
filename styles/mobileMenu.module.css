@@ -17,7 +17,7 @@
 .wrapper ul{
     display: flex;
     flex-direction: column;
-    gap:30px;
+    gap:50px;
     font-size: 2rem;
     color: white;
 }
