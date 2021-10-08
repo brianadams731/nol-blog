@@ -26,19 +26,20 @@ const Contact = () =>{
                         const reqObj = JSON.stringify({
                             name,
                             email,
-                            textBody,
+                            message:textBody,
                         })
+                        
+                        setName("");
+                        setEmail("");
+                        setTextBody("");
 
-                        console.log(`CONTACT FORM SUBMIT: ${reqObj}`);
-
-                        const data = fetch("",{
+                        const data = fetch("https://thoughtgrove.herokuapp.com/portfolio",{
                             method:"POST",
                             headers:{
                                 "Content-Type":"application/json",
                             },
                             body: reqObj,
                         })
-
                     }}>Send Message</button>
                 </form>
             </div>
