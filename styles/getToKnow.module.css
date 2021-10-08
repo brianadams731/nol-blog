@@ -28,6 +28,7 @@
     flex-direction: column;
     gap:30px;
     list-style-type: disc;
+    list-style-position: inside;
 }
 
 .contentWrapper li{

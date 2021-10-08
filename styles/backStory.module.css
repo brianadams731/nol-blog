@@ -18,4 +18,5 @@
 
 .textBox p{
     display: block;
+    max-width: 75ch;
 }

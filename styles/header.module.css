@@ -69,3 +69,10 @@
 .navLinks li:hover::after{
     transform: scaleX(1);
 }
+
+/*PREVENTS DESKTOP HEADER FLASH ON MOBILE, DELETE OR CHANGE IF useShowMobile WIDTH CHANGES IN Header.js*/
+@media screen and (max-width:550px){
+    .deskWrapper{
+        display: none;
+    }
+}
