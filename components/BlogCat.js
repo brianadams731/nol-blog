@@ -32,7 +32,7 @@ const BlogCat = ({text,url,image}) =>{
         <Link href={url}>
             <motion.div initial="init" animate={elementInViewport?"shown":""} variants={variants} ref={elementRef} className={styles.wrapper}>
                 <div className={styles.imageWrap}>
-                    <Image className={styles.image} height={350} width={240} objectFit="cover" src={image} />
+                    <Image className={styles.image} alt={text} height={350} width={240} objectFit="cover" src={image} />
                 </div>
                 <div className={styles.label}>{text}</div>
             </motion.div>

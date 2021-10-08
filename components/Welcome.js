@@ -9,7 +9,6 @@ const Welcome = () =>{
                     <ImageOverlap
                         imgTwo="/media/Self love.jpg"
                         imgOne="/media/Main 1.jpg" 
-                        
                     />
                 </div>
                 <div className={styles.altBox}>

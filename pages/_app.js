@@ -25,6 +25,7 @@ function MyApp({ Component, pageProps }) {
     <>
     <Head>
       <title>No Ordinary Self</title>
+      <meta name="description" content="A blog about self help, helping users improve their mindset, encourage personal growth and focus on self love"></meta>
     </Head>
     <Layout>
       <AnimatePresence>
