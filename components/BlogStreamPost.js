@@ -25,11 +25,17 @@ const BlogStreamPost = ({data, dragging}) =>{
             transition:{
                 delay: .1,
             }
+        },
+        scale:{
+            scale:1.12,
+            transition:{
+                duration:.35
+            }
         }
     }
 
     return (
-        <motion.div  initial="init" animate={elementInViewport?"shown":""} variants={variants} ref={elementRef} style={{pointerEvents:dragging?"none":"auto"}} className={styles.wrapper} key={"PLACEHOLDER"}>
+        <motion.div  initial="init" animate={elementInViewport?"shown":""} variants={variants} ref={elementRef} style={{pointerEvents:dragging?"none":"auto"}} className={styles.wrapper} key={"PLACEHOLDER"} whileHover={dragging?"":"scale"}>
             <Link  href={`/blog/${data.path}`}>
                 <div className={styles.previewWrapper}>
                     <Image className={styles.preview} width={250} height={250} src={data?.preview} objectFit="cover" alt="blogItem"/>

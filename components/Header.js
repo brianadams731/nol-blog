@@ -13,20 +13,19 @@ import useShowMobile from "../hooks/useShowMobile";
 
 
 const Header = () =>{
-    const atTop = useIsAtTopOfPage();
     const showMobile = useShowMobile(550);
     const [mobileMenuOpen,setMobileMenuOpen] = useState(false);
 
 
     return(
         <>
-        <motion.header className={styles.wrapper} initial={{y:atTop||showMobile?0:"-45%"}} animate={{y:atTop||showMobile?0:"-45%"}} transition={{type:"tween", duration:.4}}>
-            {showMobile?<HeaderMobile mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />:<HeaderDesktop atTop={atTop}/>}
-            <div className={`${styles.accentLine}`}></div>
-        </motion.header>
-        <AnimatePresence>
-            {mobileMenuOpen&&showMobile?<MobileMenu setMobileMenuOpen={setMobileMenuOpen}/>:null}
-        </AnimatePresence>
+            <header className={styles.wrapper}>
+                {showMobile?<HeaderMobile mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />:<HeaderDesktop />}
+                <div className={`${styles.accentLine}`}></div>
+            </header>
+            <AnimatePresence>
+                {mobileMenuOpen&&showMobile?<MobileMenu setMobileMenuOpen={setMobileMenuOpen}/>:null}
+            </AnimatePresence>
         </>
     )
 }
