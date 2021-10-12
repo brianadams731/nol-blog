@@ -5,9 +5,11 @@ import { previewAdapter, deURLBlogSubject } from "../../../graphql/adapters.js";
 import {request} from "graphql-request";
 
 import { motion } from "framer-motion";
+import useShowMobile from "../../../hooks/useShowMobile.js";
 
 import styles from "../../../styles/categorySlug.module.css";
 import BlogPostReel from "../../../components/BlogPostReel.js";
+import BlogStreamPost from "../../../components/BlogStreamPost.js";
 
 export const getStaticPaths = async () =>{
     const paths = [];
@@ -56,7 +58,37 @@ export const getStaticProps = async({params}) =>{
 }
 
 const CategoryPage = ({category, dataMatrix, variants}) =>{
-
+    const showMobile = useShowMobile(550);
+    // TODO REFACTOR THIS!!!!!!
+    const renderContent = () =>{
+        if(showMobile){
+            const data = [];
+            // Unpack the matrix into an array
+            dataMatrix.forEach((dataArray) =>{
+                dataArray.forEach((item)=>{
+                    data.push(item);
+                })
+            })
+            // Map over the unpacked matrix
+            return (
+                <div className={styles.mobileContent}>
+                    {data.map((item, index)=>{
+                        return (
+                            <BlogStreamPost data={item} key={index} />
+                        )
+                    })}
+                </div>
+            )
+        }else{
+            return(
+                <div className={styles.blogReelSection}>
+                    {dataMatrix.map((dataArray, index) =>{
+                        return <BlogPostReel data={dataArray} key={index}/>
+                    })}
+                </div>
+            )
+        }
+    }
 
     return (
         <motion.div className={styles.wrapper} initial="initialFadeIn" animate="animatedFadeIn" exit="initialFadeIn" key={category} variants={variants}>
@@ -64,11 +96,7 @@ const CategoryPage = ({category, dataMatrix, variants}) =>{
             <div className={styles.headWrapper}>
                 <h3 className={styles.headText}>Latest Posts</h3>
             </div>
-            <div className={styles.blogReelSection}>
-                {dataMatrix.map((dataArray, index) =>{
-                    return <BlogPostReel data={dataArray} key={index}/>
-                })}
-            </div>
+            {renderContent()}
         </motion.div>
     )
 }
