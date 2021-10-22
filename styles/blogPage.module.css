@@ -13,6 +13,10 @@
     text-align: center;
 }
 
+.blogStreamWrapper{
+    overflow-x: hidden; /*HIDES OVERFLOW POSTREEL*/
+}
+
 @media screen and (max-width:550px) {
     .wrapper{
         overflow-x: hidden;
