@@ -12,7 +12,7 @@ import GetToKnow from "../components/GetToKnow.js";
 import BackStory from "../components/BackStory.js";
 const Story = ({variants}) =>{
     return (
-        <motion.div className={styles.wrapper} initial="initialFadeIn" animate="animatedFadeIn" exit="initialFadeIn" key="story" variants={variants}>
+        <motion.div role="main" className={styles.wrapper} initial="initialFadeIn" animate="animatedFadeIn" exit="initialFadeIn" key="story" variants={variants}>
             <About />
             <GetToKnow />
             <BackStory />

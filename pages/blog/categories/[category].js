@@ -71,7 +71,7 @@ const CategoryPage = ({category, dataMatrix, variants}) =>{
             })
             // Map over the unpacked matrix
             return (
-                <div className={styles.mobileContent}>
+                <div role="main" className={styles.mobileContent}>
                     {data.map((item, index)=>{
                         return (
                             <BlogStreamPost data={item} key={index} />
@@ -81,7 +81,7 @@ const CategoryPage = ({category, dataMatrix, variants}) =>{
             )
         }else{
             return(
-                <div className={styles.blogReelSection}>
+                <div role="main" className={styles.blogReelSection}>
                     {dataMatrix.map((dataArray, index) =>{
                         return <BlogPostReel data={dataArray} key={index}/>
                     })}

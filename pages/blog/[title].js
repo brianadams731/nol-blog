@@ -30,7 +30,7 @@ export const getStaticProps = async({params}) =>{
 
 const BlogPost = ({data, variants}) =>{
     return (
-        <motion.div className={styles.wrapper} initial="initialFadeIn" animate="animatedFadeIn" exit="initialFadeIn" key={data.title} variants={variants}>
+        <motion.div role="main" className={styles.wrapper} initial="initialFadeIn" animate="animatedFadeIn" exit="initialFadeIn" key={data.title} variants={variants}>
             <h1 className={styles.blogTitle}>{data.title}</h1>
             <BlogPostBody content={data.content} />
         </motion.div>

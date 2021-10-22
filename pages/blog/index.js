@@ -49,7 +49,7 @@ const Blog = ({mindset, personalGrowth, selfLove, variants}) =>{
             <div className={styles.title}>
                 <h1>On the Blog</h1>
             </div>
-            <div className={styles.blogStreamWrapper}>
+            <div role="main" className={styles.blogStreamWrapper}>
                 <BlogStream data={mindset} category="MINDSET"/>
                 <BlogStream data={personalGrowth} category="PERSONAL GROWTH" left={false}/>
                 <BlogStream data={selfLove} category="SELF LOVE"/>
