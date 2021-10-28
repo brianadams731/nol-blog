@@ -40,8 +40,8 @@ export const getStaticProps = async({params}) =>{
     const dataMatrix = []
     while(i<data.length){
         if(even){
-            dataMatrix.push(data.slice(i,i+2));
-            i = i+2
+            dataMatrix.push(data.slice(i,i+3));
+            i = i+3
         }else{
             dataMatrix.push(data.slice(i,i+3));
             i = i+3;
