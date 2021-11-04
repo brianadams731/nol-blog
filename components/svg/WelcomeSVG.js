@@ -24,7 +24,7 @@ const WelcomeSVG = () =>{
         pathThree:{
             pathLength:1,
             transition:{
-                duration:1,
+                duration:.5,
                 delay:4.8
             }        
         },
@@ -35,7 +35,7 @@ const WelcomeSVG = () =>{
             scale:1,
             transition:{
                 duration:.15,
-                delay:5.8
+                delay:5.3
             }
         }
         
