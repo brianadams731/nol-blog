@@ -1,0 +1,17 @@
+.wrapper{
+
+}
+
+.wrapper svg{
+    padding-left: 30px;
+}
+@media screen and (max-width: 550px) {
+    .wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .wrapper svg{
+        padding-left: 0;
+    }
+}
