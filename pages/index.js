@@ -4,7 +4,6 @@ import Welcome from '../components/Welcome.js';
 import AffirmationSign from "../components/AffirmationSign.js";
 import Intro from "../components/Intro.js";
 
-import WelcomeSVG from "../components/svg/WelcomeSVG.js"
 
 import styles from "../styles/Home.module.css";
 import {motion} from "framer-motion";

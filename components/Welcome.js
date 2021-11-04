@@ -1,4 +1,5 @@
 import ImageOverlap from "../components/ImageOverlap";
+import WelcomeSVG from "./svg/WelcomeSVG";
 import styles from "../styles/welcome.module.css";
 
 const Welcome = () =>{
@@ -12,7 +13,7 @@ const Welcome = () =>{
                     />
                 </div>
                 <div className={styles.altBox}>
-                    <h1>Welcome!</h1>
+                    <WelcomeSVG />
                     <div className={styles.subBox}>
                         <h3>So happy to have you here!</h3>
                         <p>Are you ready to become your highest self</p>
