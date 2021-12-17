@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: saturday;
-  src: url("../public/Saturday.otf") format("opentype");
+  src: url("/Saturday.otf") format("opentype");
 }
 
 html,body {
