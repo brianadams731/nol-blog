@@ -1,7 +1,7 @@
-import ImageOverlap from "./ImageOverlap.js";
+import ImageOverlap from "./ImageOverlap";
 import styles from "../styles/greeting.module.css";
 
-const Greeting = () =>{
+const Greeting = ():JSX.Element =>{
     return (
         <div className={styles.wrapper}>
             <div className={styles.imgWrapper}>

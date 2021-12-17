@@ -6,9 +6,9 @@ import {useEffect, useRef, useState} from "react";
     // @returns: elementRef: ref - ref to place on the element you want to observe
     // @returns: inViewPort: boolean - bool value that notifies when element is in the viewport
 
-const useElementInViewport = (keepInView = false, percentTillReveal = 1) =>{
-    const elementRef = useRef(null);
-    const [inViewPort,setInViewPort] = useState(false);
+const useElementInViewport = (keepInView:boolean = false, percentTillReveal:number = 1) =>{
+    const elementRef = useRef<HTMLElement>(null);
+    const [inViewPort,setInViewPort] = useState<boolean>(false);
     const options = useRef({
         root:null,      // object to check against
         rootMargin: "0px",

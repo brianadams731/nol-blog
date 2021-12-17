@@ -2,7 +2,7 @@ import Link from "next/link"
 import styles from "../styles/intro.module.css";
 import ImageOverlap from "./ImageOverlap";
 
-const Intro = () =>{
+const Intro = ():JSX.Element =>{
     return (
         <div className={styles.wrapper}>
             <div className={styles.textBox}>

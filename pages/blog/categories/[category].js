@@ -8,8 +8,8 @@ import { motion } from "framer-motion";
 import useShowMobile from "../../../hooks/useShowMobile.js";
 
 import styles from "../../../styles/categorySlug.module.css";
-import BlogPostReel from "../../../components/BlogPostReel.js";
-import BlogStreamPost from "../../../components/BlogStreamPost.js";
+import BlogPostReel from "../../../components/BlogPostReel";
+import BlogStreamPost from "../../../components/BlogStreamPost";
 
 export const getStaticPaths = async () =>{
     const paths = [];

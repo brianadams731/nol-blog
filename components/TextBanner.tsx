@@ -1,6 +1,11 @@
 import styles from "../styles/textBanner.module.css";
 
-const TextBanner = ({text, attribute}) =>{
+interface Props{
+    text:string;
+    attribute:string;
+}
+
+const TextBanner = ({text, attribute}:Props):JSX.Element =>{
     return(
         <div className={styles.wrap}>
             <div>

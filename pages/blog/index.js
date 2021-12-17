@@ -4,7 +4,7 @@ import {request} from "graphql-request";
 
 import {motion} from "framer-motion";
 import styles from "../../styles/blogPage.module.css";
-import BlogStream from "../../components/BlogStream.js";
+import BlogStream from "../../components/BlogStream";
 
 
 export const getStaticProps = async () =>{

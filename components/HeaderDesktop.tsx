@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 import {AnimatePresence, motion} from "framer-motion";
 
 import styles from "../styles/header.module.css";
 
-const HeaderDesktop = () =>{
+const HeaderDesktop = ():JSX.Element =>{
 
     const variants = {
         init :{
@@ -22,9 +22,8 @@ const HeaderDesktop = () =>{
             },
         }
     }
-
-
-    const router = useRouter();
+    
+    const router: NextRouter = useRouter();
     return (
         <div className={styles.deskWrapper}>
             <nav className={styles.nav}>

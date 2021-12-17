@@ -40,7 +40,6 @@ const WelcomeSVG = () =>{
         }
         
     }
-    //viewBox="0 0 646.01 315.57"
     return (
         <div className={styles.wrapper}>
             <svg style={{display:"block"}} fill="none" xmlns="http://www.w3.org/2000/svg" width="2.5in" height="1.22in" viewBox="0 0 646.01 315.57">

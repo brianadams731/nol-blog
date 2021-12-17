@@ -1,9 +1,13 @@
-import Footer from "../components/Footer.js";
-import Header from "../components/Header.js";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 import styles from "../styles/layout.module.css";
 
-const Layout = ({ children }) =>{
+interface Props{
+    children: React.ReactNode
+}
+
+const Layout = ({ children }:Props) =>{
     return (
         <div className={styles.appWrap}>
             <Header />

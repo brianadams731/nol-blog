@@ -2,12 +2,14 @@ import styles from "../styles/headerMobile.module.css";
 import sharedStyles from "../styles/header.module.css";
 
 import {motion} from "framer-motion";
+import {Dispatch, SetStateAction} from "react";
 
-const HeaderMobile = ({mobileMenuOpen, setMobileMenuOpen}) =>{
+interface Props{
+    mobileMenuOpen:boolean;
+    setMobileMenuOpen:Dispatch<SetStateAction<boolean>>;
+}
 
-
-
-
+const HeaderMobile = ({mobileMenuOpen, setMobileMenuOpen}:Props):JSX.Element =>{
     const upperLine = {
         init:{
             top:"0%",

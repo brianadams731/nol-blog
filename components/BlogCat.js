@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { motion } from "framer-motion";
-import useElementInViewport from "../hooks/useElementInViewport.js";
+import useElementInViewport from "../hooks/useElementInViewport";
 
 const BlogCat = ({text,url,image}) =>{
     const [elementRef, elementInViewport] = useElementInViewport(true,.3);

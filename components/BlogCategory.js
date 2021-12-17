@@ -1,6 +1,6 @@
 import styles from "../styles/blogCategory.module.css";
 
-import BlogCat from "./BlogCat.js";
+import BlogCat from "./BlogCat";
 
 
 const BlogCategory = () =>{

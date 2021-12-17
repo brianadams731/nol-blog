@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/backStory.module.css";
 
-const BackStory = () =>{
+const BackStory = ():JSX.Element =>{
     return(
         <div className={styles.wrapper}>
             <div className={styles.headerWrapper}>

@@ -2,7 +2,7 @@ import ImageOverlap from "../components/ImageOverlap";
 import WelcomeSVG from "./svg/WelcomeSVG";
 import styles from "../styles/welcome.module.css";
 
-const Welcome = () =>{
+const Welcome = ():JSX.Element =>{
     return (
         <div className={styles.wrapper}>
             <div className={styles.contentBox}>

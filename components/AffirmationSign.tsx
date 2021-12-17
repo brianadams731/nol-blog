@@ -2,9 +2,9 @@ import styles from "../styles/affirmationSign.module.css";
 
 import {useState} from "react";
 
-const AffirmationSign = () =>{
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
+const AffirmationSign = ():JSX.Element =>{
+    const [name, setName] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
 
     const handleChange = (e,set) =>{
         set(e.target.value);
@@ -23,7 +23,7 @@ const AffirmationSign = () =>{
                         name,
                         email,
                     })
-                    console.log(`AFFIRMATION SIGN SUBMIT ${reqObj}`);
+                    //console.log(`AFFIRMATION SIGN SUBMIT ${reqObj}`);
                     const data = fetch("",{
                         method:"POST",
                         headers:{

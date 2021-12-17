@@ -1,7 +1,7 @@
 import styles from "../styles/getToKnow.module.css";
 import ImageOverlap from "./ImageOverlap";
 
-const GetToKnow = () =>{
+const GetToKnow = ():JSX.Element =>{
     return (
         <div className={styles.wrapper}>
             <div className={styles.headerWrapper}>
@@ -29,10 +29,10 @@ const GetToKnow = () =>{
 
                 </div>
                 <ImageOverlap
-                imgTwo="/media/Self love.jpg"
-                imgOne="/media/About 1.jpg"
-                height={400}
-                width={266}
+                    imgTwo="/media/Self love.jpg"
+                    imgOne="/media/About 1.jpg"
+                    height={400}
+                    width={266}
                 />
             </div>
         </div>

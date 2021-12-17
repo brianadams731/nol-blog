@@ -2,7 +2,7 @@ import styles from "../styles/about.module.css";
 
 import Image from "next/image"
 
-const About = () =>{
+const About = ():JSX.Element =>{
     return (
         <div className={styles.wrapper}>
             <div className={styles.imgWrapper}>

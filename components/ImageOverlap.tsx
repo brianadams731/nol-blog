@@ -2,7 +2,14 @@ import Image from "next/image";
 import PropTypes from "prop-types";
 import styles from "../styles/imageOverlap.module.css";
 
-const ImageOverlap = ({imgOne, imgTwo, height, width}) =>{
+interface Props{
+    imgOne:string;
+    imgTwo:string;
+    height:number;
+    width:number;
+}
+
+const ImageOverlap = ({imgOne, imgTwo, height, width}:Props):JSX.Element =>{
     return (
         <div className={styles.wrapper} style={{height:`${height+15}px`, width:`${width+15}px`}}>
             <div className={styles.imgTwo} style={{height:`${height+15}px`, width:`${width+15}px`}}>

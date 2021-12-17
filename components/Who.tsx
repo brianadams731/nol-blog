@@ -1,7 +1,7 @@
 import styles from "../styles/who.module.css";
+import Image from "next/image";
 
-import Image from "next/image"
-const Who = () =>{
+const Who = ():JSX.Element =>{
     return (
         <>
             <div className={styles.header}>

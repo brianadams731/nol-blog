@@ -1,10 +1,10 @@
 import styles from "../styles/contact.module.css";
 
 import {useState} from "react";
-const Contact = () =>{
-    const [name, setName] = useState("");
-    const [email,setEmail] = useState("");
-    const [textBody, setTextBody] = useState("");
+const Contact = ():JSX.Element =>{
+    const [name, setName] = useState<string>("");
+    const [email,setEmail] = useState<string>("");
+    const [textBody, setTextBody] = useState<string>("");
 
     const handelInput = (e,set) =>{
         set(e.target.value)

@@ -5,11 +5,16 @@ import styles from "../styles/mobileMenu.module.css";
 
 import Link from "next/link"
 
-import useIsClickOutsideElement from "../hooks/useIsClickOutsideElement.js";
+import useIsClickOutsideElement from "../hooks/useIsClickOutsideElement";
+import {Dispatch, SetStateAction} from "react";
 
-const MobileMenu = ({setMobileMenuOpen}) =>{
+interface Props{
+    setMobileMenuOpen:Dispatch<SetStateAction<boolean>>
+}
 
-    const [isClickOutside, targetEle, clickEvent] = useIsClickOutsideElement(true);
+const MobileMenu = ({setMobileMenuOpen}:Props):JSX.Element =>{
+
+    const [isClickOutside, targetEle, clickEvent] = useIsClickOutsideElement();
 
     const closeMenu = () =>{
         setMobileMenuOpen(false);
