@@ -19,6 +19,7 @@ const MobileMenu = ({setMobileMenuOpen}) =>{
         if(isClickOutside && !clickEvent?.target.className.includes("header")){
             closeMenu();
         }
+        //eslint-disable-next-line
     },[isClickOutside])
 
     const list = {
@@ -29,13 +30,13 @@ const MobileMenu = ({setMobileMenuOpen}) =>{
     return (
         <motion.div initial={{x:"100%"}} animate={{x:0}}  exit={{x:"100%"}} ref={targetEle} transition={{type:"tween"}} className={styles.wrapper}>
             <ul>
-                <Link href="/">
+                <Link href="/" passHref>
                     <motion.li variants={list} animate="base" whileHover="hov" onClick={closeMenu}>Home</motion.li>
                 </Link>
-                <Link href="/blog">
+                <Link href="/blog" passHref>
                     <motion.li variants={list} animate="base" whileHover="hov" onClick={closeMenu}>Blog</motion.li>
                 </Link>
-                <Link href="/story">
+                <Link href="/story" passHref>
                     <motion.li variants={list} animate="base" whileHover="hov" onClick={closeMenu}>My Story</motion.li>
                 </Link>
             </ul>

@@ -17,7 +17,7 @@ const BackStory = () =>{
                 <p>
                 I truly hope to inspire and motivate you to become your ultimate best self. Everything starts and ends with your thoughts, you decide how you want your life to be, based on how you see yourself. That is why I started this blog, to help you choose every day to become your no ordinary self. 
                 </p>
-                <Image height={500} width={333}  objectFit="cover" src="/media/Main 2.jpg" />
+                <Image height={500} width={333}  objectFit="cover" src="/media/Main 2.jpg" alt="" />
             </div>
         </div>
     )

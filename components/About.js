@@ -6,7 +6,7 @@ const About = () =>{
     return (
         <div className={styles.wrapper}>
             <div className={styles.imgWrapper}>
-                <Image width={700} height={466} objectFit="cover" src="/media/About 2.jpg"/>
+                <Image width={700} height={466} objectFit="cover" src="/media/About 2.jpg" alt=""/>
             </div>
             <h3>Hi There! I&apos;m Naka</h3>
             <p>

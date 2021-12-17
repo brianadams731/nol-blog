@@ -36,7 +36,7 @@ const BlogStreamPost = ({data, dragging}) =>{
 
     return (
         <motion.div  initial="init" animate={elementInViewport?"shown":""} variants={variants} ref={elementRef} style={{pointerEvents:dragging?"none":"auto"}} className={styles.wrapper} key={"PLACEHOLDER"} whileHover={dragging?"":"scale"}>
-            <Link  href={`/blog/${data.path}`}>
+            <Link  href={`/blog/${data.path}`} passHref>
                 <div className={styles.previewWrapper}>
                     <Image className={styles.preview} width={250} height={250} src={data?.preview} objectFit="cover" alt="blogItem"/>
                 </div>
@@ -44,7 +44,7 @@ const BlogStreamPost = ({data, dragging}) =>{
             <div className={styles.textBox}>
                 <h2 className={styles.title}>{data.title}</h2>
                 <p className={styles.description}>{data.description}</p>
-                <Link href={`/blog/${data.path}`}>
+                <Link href={`/blog/${data.path}`} passHref>
                     <div className={styles.readMoreWrapper}>
                         <h6 className={styles.readMore}>READ MORE</h6>
                     </div>

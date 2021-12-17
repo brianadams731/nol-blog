@@ -16,7 +16,7 @@ const Intro = () =>{
                 If you are looking for a mindset boost, tips on how to become extraordinary, and develop more
                 self-love, look no more. I got you, sis!
                 </p>
-                <Link href="/story">
+                <Link href="/story" passHref>
                     <button>GET TO KNOW ME</button>
                 </Link>
             </div>

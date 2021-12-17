@@ -22,7 +22,7 @@ const BlogStream = ({category,data,left}) =>{
             <motion.div initial={{x:"-100%"}} animate={{x:leftSideInView?"-100%":0}} transition={{type:"tween", duration:.5}} className={styles.leftArrow}><div className={styles.arrow}>&#8249;</div></motion.div>
             <div className={`${styles.category} ${left?styles.left:styles.right}`}>
                 <div className={styles.categoryWrap}>
-                    <Link href={`/blog/categories/${categoryURLParser(category)}`}><h3>{category}</h3></Link>
+                    <Link href={`/blog/categories/${categoryURLParser(category)}`} passHref><h3>{category}</h3></Link>
                 </div>
             </div>
 
