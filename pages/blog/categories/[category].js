@@ -1,11 +1,11 @@
-import {categoryURLParser } from "../../../components/utils/pathUtils.js" 
+import {categoryURLParser } from "../../../components/utils/pathUtils" 
 
-import {getAllBlogSubjects, getBlogPreviewBySubject, endpoint } from "../../../graphql/querys.js";
-import { previewAdapter, deURLBlogSubject } from "../../../graphql/adapters.js";
+import {getAllBlogSubjects, getBlogPreviewBySubject, endpoint } from "../../../graphql/querys";
+import { previewAdapter, deURLBlogSubject } from "../../../graphql/adapters";
 import {request} from "graphql-request";
 
 import { motion } from "framer-motion";
-import useShowMobile from "../../../hooks/useShowMobile.js";
+import useShowMobile from "../../../hooks/useShowMobile";
 
 import styles from "../../../styles/categorySlug.module.css";
 import BlogPostReel from "../../../components/BlogPostReel";
