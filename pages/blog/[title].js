@@ -1,5 +1,5 @@
-import {endpoint, getAllSlugs, getPostWithDetailFromSlug} from "../../graphql/querys.js";
-import { blogPostAdapter } from "../../graphql/adapters.js";
+import {endpoint, getAllSlugs, getPostWithDetailFromSlug} from "../../graphql/querys";
+import { blogPostAdapter } from "../../graphql/adapters";
 import {request} from "graphql-request";
 
 import {motion} from "framer-motion";

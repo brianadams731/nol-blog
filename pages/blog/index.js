@@ -1,5 +1,5 @@
-import { endpoint, getAllBlogPreviews } from "../../graphql/querys.js";
-import {previewAdapter} from "../../graphql/adapters.js"
+import { endpoint, getAllBlogPreviews } from "../../graphql/querys";
+import {previewAdapter} from "../../graphql/adapters"
 import {request} from "graphql-request";
 
 import {motion} from "framer-motion";

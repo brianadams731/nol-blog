@@ -3,7 +3,7 @@ import styles from "../styles/blogCategory.module.css";
 import BlogCat from "./BlogCat";
 
 
-const BlogCategory = () =>{
+const BlogCategory = ():JSX.Element =>{
     return (
         <div className={styles.wrapper}>
             <h3 className={styles.heroText}>Browse the blog</h3>

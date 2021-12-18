@@ -8,14 +8,21 @@ import styles from "../styles/blogStream.module.css";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import {motion} from "framer-motion"; 
+import { BlogCardData } from "../graphql/adapters";
 
-const BlogStream = ({category,data,left}) =>{
-    const wrapperRef = useRef();
-    const [dragging, setDragging] = useState(false);
+interface Props{
+    category:string;
+    data: BlogCardData[];
+    left: boolean;
+}
 
-    const containerRef = useRef();
-    const [leftSideInView, setLeftSideInView] = useState(true);
-    const [rightSideInView, setRightSideInView] = useState(false);
+const BlogStream = ({category,data,left}:Props) =>{
+    const wrapperRef = useRef<HTMLDivElement>();
+    const [dragging, setDragging] = useState<boolean>(false);
+
+    const containerRef = useRef<HTMLDivElement>();
+    const [leftSideInView, setLeftSideInView] = useState<boolean>(true);
+    const [rightSideInView, setRightSideInView] = useState<boolean>(false);
 
     return(
         <div ref={wrapperRef} className={styles.wrapper}>
