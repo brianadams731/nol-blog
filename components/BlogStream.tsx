@@ -41,8 +41,8 @@ const BlogStream = ({category,data,left}:Props) =>{
         const wrapWidth = wrapperRef.current.offsetWidth;
         const containerWidth = containerRef.current.offsetWidth;
 
-        const right = containerWidth>wrapWidth? wrapperRef.current.offsetWidth/3:0;
-        const left = containerWidth>wrapWidth? containerRef.current.offsetWidth - (wrapperRef.current.offsetWidth/3)*2:0;
+        const right = containerWidth>wrapWidth? wrapperRef.current.offsetWidth/5:0;
+        const left = containerWidth>wrapWidth? containerRef.current.offsetWidth - (wrapperRef.current.offsetWidth/5)*4:0;
         
         setDragAreaWidthRight(right);
         setDragAreaWidthLeft(left);

@@ -14,21 +14,22 @@
 .socialMediaWrap svg{
     height: 32px;
     width: 32px;
-    fill: var(--slate);
+    fill: white;
     transition: fill .35s ease-in-out;
 }
 
 .socialMediaWrap svg:hover{
-    fill:white;
+    fill:var(--slate);
 }
 
 .contentWrap{
     margin-top: 20px;
+    font-weight: 500;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap:10px;
     text-align: center;
-    color: var(--slate);
+    color: white;
 }

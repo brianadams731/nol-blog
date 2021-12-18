@@ -11,67 +11,64 @@ const HiImNakaSVG = ():JSX.Element =>{
         initial:{
             pathLength:0,
         },
-        test:{
-            pathLength:1
-        },
-
+        
         hHi:{
             pathLength:1,
             transition:{
-                duration:1,
+                duration:.5,
                 delay:0,
             }        
         },iHi:{
             pathLength:1,
             transition:{
-                duration:1,
-                delay:1,
+                duration:.3,
+                delay:.5,
             }        
         },bangHi:{
             pathLength:1,
             transition:{
-                duration:1,
-                delay:2,
+                duration:.3,
+                delay:.8,
             }        
         },
 
         iIm:{
             pathLength:1,
             transition:{
-                duration:1,
-                delay:3,
+                duration:.6,
+                delay:1.5,
             }        
         },lineIm:{
             pathLength:1,
             transition:{
-                duration:.5,
-                delay:3.5,
+                duration:.1,
+                delay:2.2,
             }        
         },mIm:{
             pathLength:1,
             transition:{
-                duration:1,
-                delay:4.5,
+                duration:.7,
+                delay:2.3,
             }        
         },
 
         nNaka:{
             pathLength:1,
             transition:{
-                duration:1,
-                delay:5.5,
+                duration:.5,
+                delay:3.2,
             }        
         },akNaka:{
             pathLength:1,
             transition:{
-                duration:1,
-                delay:6.5,
+                duration:.6,
+                delay:3.7,
             }        
         },kaNaka:{
             pathLength:1,
             transition:{
-                duration:1,
-                delay:7.5,
+                duration:.7,
+                delay:4.3,
             }        
         },
 
@@ -83,13 +80,13 @@ const HiImNakaSVG = ():JSX.Element =>{
             scale:1,
             transition:{
                 duration:.15,
-                delay:2,
+                delay:.8,
             }
         },bangCircle:{
             scale:1,
             transition:{
                 duration:.15,
-                delay:3,
+                delay:1,
             }
         }
     }
