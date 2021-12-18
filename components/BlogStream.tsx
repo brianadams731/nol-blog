@@ -25,10 +25,27 @@ const BlogStream = ({category,data,left}:Props) =>{
     const [rightSideInView, setRightSideInView] = useState<boolean>(false);
 
 
-    const [dragAreaWidth,setDragAreaWidth] = useState<number>(0);
+    const [dragAreaWidthRight,setDragAreaWidthRight] = useState<number>(0);
+    const [dragAreaWidthLeft,setDragAreaWidthLeft] = useState<number>(0);
+
     useEffect(()=>{
-        setDragAreaWidth(containerRef.current.offsetWidth/4);
+        reClacDragConstraints();
+        window.addEventListener("resize",reClacDragConstraints)
+        return ()=>{
+            window.removeEventListener("resize",reClacDragConstraints)
+        }
     },[])
+
+    const reClacDragConstraints = ():void =>{
+        const wrapWidth = wrapperRef.current.offsetWidth;
+        const containerWidth = containerRef.current.offsetWidth;
+
+        const right = containerWidth>wrapWidth? wrapperRef.current.offsetWidth/3:0;
+        const left = containerWidth>wrapWidth? containerRef.current.offsetWidth - (wrapperRef.current.offsetWidth/3)*2:0;
+        
+        setDragAreaWidthRight(right);
+        setDragAreaWidthLeft(left);
+    }
 
     return(
         <div ref={wrapperRef} className={styles.wrapper}>
@@ -40,8 +57,8 @@ const BlogStream = ({category,data,left}:Props) =>{
             </div>
             
             <motion.div ref={containerRef} className={`${styles.postWrapper} ${left?"":styles.pushRight}`} drag="x" dragConstraints={{
-                left: -dragAreaWidth * 3,
-                right: dragAreaWidth,
+                left: -dragAreaWidthLeft,
+                right: dragAreaWidthRight
                 // was wrapper ref
             }} onDragStart={()=>{setDragging(true)}} onDragEnd={()=>{setDragging(false)}} onUpdate={(e)=>{
                 const offsetConstant = 100 // The offset in px that the first and last element can be off screen before registering as off
