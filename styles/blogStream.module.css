@@ -80,27 +80,18 @@
     margin-left: auto;
 }
 
+
 .leftArrow, .rightArrow{
-    position:absolute;
-    font-size: 8rem;
+    font-size: 6rem;
     color:var(--brown);
-    top:0;
-    width:50px;
-    height:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    z-index: 9999;
+    height: fit-content;
+    width: fit-content;
 }
 
-.leftArrow{
-    background-image: linear-gradient(to right, rgb(255, 255, 255,0.65), rgba(255, 255, 255, 0));
-    left:0;
-    transform: translateX(-100%);
-}
-.rightArrow{
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0));
-    right:0;
-    transform: translateX(100%);
+.arrowWrap{
+    margin-top: -55px;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-between;
 }

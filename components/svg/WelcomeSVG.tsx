@@ -9,23 +9,23 @@ const WelcomeSVG = ():JSX.Element =>{
         pathOne:{
             pathLength:1,
             transition:{
-                duration:2.5,
+                duration:2,
                 delay:0,
             }        
         },
         pathTwo:{
             pathLength:1,
             transition:{
-                duration:2.5,
-                delay:2.3,
+                duration:2,
+                delay:2,
             }        
         },
 
         pathThree:{
             pathLength:1,
             transition:{
-                duration:.5,
-                delay:4.8
+                duration:.3,
+                delay:4
             }        
         },
         circleInitial:{
@@ -35,7 +35,7 @@ const WelcomeSVG = ():JSX.Element =>{
             scale:1,
             transition:{
                 duration:.15,
-                delay:5.3
+                delay:4.5
             }
         }
         

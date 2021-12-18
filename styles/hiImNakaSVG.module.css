@@ -1,0 +1,10 @@
+.wrapper svg{
+    width:75%;
+    padding: 10px;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
