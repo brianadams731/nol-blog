@@ -6,10 +6,16 @@ import {motion} from 'framer-motion';
 import PropTypes from "prop-types";
 
 import useElementInViewport from "../hooks/useElementInViewport";
+import { BlogCardData } from "../graphql/adapters";
 
-const BlogStreamPost = ({data, dragging}) =>{
+interface Props{
+    data: BlogCardData;
+    dragging:boolean;
+}
 
-    const [elementRef, elementInViewport] = useElementInViewport(true,.5);
+const BlogStreamPost = ({data, dragging}:Props) =>{
+
+    const [elementRef, elementInViewport] = useElementInViewport<HTMLDivElement>(true,.5);
 
     const variants = {
         init:{

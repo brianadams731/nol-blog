@@ -1,4 +1,12 @@
-const previewAdapter = (rawQueryResponse) =>{
+export type BlogCardData = {
+    title:string;
+    description:string;
+    subject:string;
+    preview:string;
+    path:string;
+}
+
+const previewAdapter = (rawQueryResponse):BlogCardData =>{
     return rawQueryResponse.allPost.map(item =>{
         return ({
             title:item.title,

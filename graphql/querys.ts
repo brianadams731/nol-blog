@@ -8,7 +8,7 @@ const sanityTag = `default`
 
 const endpoint = `https://${sanityProjectID}.apicdn.sanity.io/v1/graphql/${sanityDataset}/${sanityTag}`
 
-const getAllPostsWithDetails = () =>{
+const getAllPostsWithDetails = ():string =>{
     return (gql`
         {
             allPost(sort: [{ _createdAt: ASC }]) {
@@ -29,7 +29,7 @@ const getAllPostsWithDetails = () =>{
       `)
 }
 
-const getAllSlugs = () =>{
+const getAllSlugs = ():string =>{
     return (gql`
         {
             allPost{
@@ -41,7 +41,7 @@ const getAllSlugs = () =>{
     `)
 }
 
-const getPostWithDetailFromSlug = (slug) =>{
+const getPostWithDetailFromSlug = (slug:string):string =>{
     return (gql`
         {
             allPost(where: {blogPostSlug: {current:{eq:"${slug}"}}}) {
@@ -62,7 +62,7 @@ const getPostWithDetailFromSlug = (slug) =>{
     `)
 }
 
-const getAllBlogPreviews = () =>{
+const getAllBlogPreviews = ():string =>{
     return(gql`
     {
         allPost(sort: [{ _createdAt: ASC }]) {
@@ -82,7 +82,7 @@ const getAllBlogPreviews = () =>{
     `)
 }
 
-const getBlogPreviewBySubject = (subject) =>{
+const getBlogPreviewBySubject = (subject:string):string =>{
     return (gql`
         {
             allPost(sort: [{ _createdAt: ASC }], where: {subject:{eq:"${subject}"}}) {
@@ -102,7 +102,7 @@ const getBlogPreviewBySubject = (subject) =>{
     `)
 }
 
-const getAllBlogSubjects = () =>{
+const getAllBlogSubjects = ():string =>{
     return(gql`
         {
             allPost{

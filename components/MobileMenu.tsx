@@ -14,14 +14,14 @@ interface Props{
 
 const MobileMenu = ({setMobileMenuOpen}:Props):JSX.Element =>{
 
-    const [isClickOutside, targetEle, clickEvent] = useIsClickOutsideElement();
+    const [isClickOutside, clickEvent, targetEle] = useIsClickOutsideElement<HTMLDivElement>();
 
     const closeMenu = () =>{
         setMobileMenuOpen(false);
     }
 
     useEffect(()=>{
-        if(isClickOutside && !clickEvent?.target.className.includes("header")){
+        if(isClickOutside && !(clickEvent?.target as HTMLDivElement).className.includes("header")){
             closeMenu();
         }
         //eslint-disable-next-line

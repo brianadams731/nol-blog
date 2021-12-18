@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, MutableRefObject, RefObject } from "react";
 
 /*
 * @returns: isOutside: boolean - boolean value representing whither click event was outside element
@@ -7,10 +7,10 @@ import React, { useState, useRef, useEffect } from "react";
 */
 // TODO FIX THIS ANY!!!
 
-const useIsClickOutsideElement = (): [isOutSide:boolean, clickEvent:any, element:any] =>{
+const useIsClickOutsideElement = <T extends HTMLElement> (): [isOutSide:boolean, clickEvent:MouseEvent, element:RefObject<T>] =>{
     const [isOutside, setIsOutSide] = useState<boolean>(false);
     const [clickEvent, setClickEvent] = useState<MouseEvent>();
-    const element = useRef<HTMLElement>();
+    const element = useRef<T>();
     
     const clicked = (e) =>{
         setClickEvent(e);
@@ -25,7 +25,7 @@ const useIsClickOutsideElement = (): [isOutSide:boolean, clickEvent:any, element
         };
     },[element])
 
-    return [isOutside,element, clickEvent];
+    return [isOutside, clickEvent, element];
 }
 
 export default useIsClickOutsideElement;

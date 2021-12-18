@@ -5,8 +5,14 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import useElementInViewport from "../hooks/useElementInViewport";
 
-const BlogCat = ({text,url,image}) =>{
-    const [elementRef, elementInViewport] = useElementInViewport(true,.3);
+interface Props{
+    text:string;
+    url:string;
+    image:string;
+}
+
+const BlogCat = ({text,url,image}:Props):JSX.Element =>{
+    const [elementRef, elementInViewport] = useElementInViewport<HTMLDivElement>(true,.3);
 
     const variants = {
         init:{

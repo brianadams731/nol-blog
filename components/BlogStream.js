@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import {categoryURLParser} from "./utils/pathUtils.js";
+import {categoryURLParser} from "./utils/pathUtils";
 
 import BlogStreamPost from "./BlogStreamPost";
 

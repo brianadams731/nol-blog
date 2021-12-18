@@ -1,7 +1,7 @@
 import styles from "../../styles/welcomeSVG.module.css";
 import {motion} from "framer-motion";
 
-const WelcomeSVG = () =>{
+const WelcomeSVG = ():JSX.Element =>{
     const variants = {
         initial:{
             pathLength:0,
