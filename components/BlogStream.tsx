@@ -24,6 +24,12 @@ const BlogStream = ({category,data,left}:Props) =>{
     const [leftSideInView, setLeftSideInView] = useState<boolean>(true);
     const [rightSideInView, setRightSideInView] = useState<boolean>(false);
 
+
+    const [dragAreaWidth,setDragAreaWidth] = useState<number>(0);
+    useEffect(()=>{
+        setDragAreaWidth(containerRef.current.offsetWidth/4);
+    },[])
+
     return(
         <div ref={wrapperRef} className={styles.wrapper}>
             <motion.div initial={{x:"-100%"}} animate={{x:leftSideInView?"-100%":0}} transition={{type:"tween", duration:.5}} className={styles.leftArrow}><div className={styles.arrow}>&#8249;</div></motion.div>
@@ -32,8 +38,12 @@ const BlogStream = ({category,data,left}:Props) =>{
                     <Link href={`/blog/categories/${categoryURLParser(category)}`} passHref><h3>{category}</h3></Link>
                 </div>
             </div>
-
-            <motion.div ref={containerRef} className={`${styles.postWrapper} ${left?"":styles.pushRight}`} drag="x" dragConstraints={wrapperRef} onDragStart={()=>{setDragging(true)}} onDragEnd={()=>{setDragging(false)}} onUpdate={(e)=>{
+            
+            <motion.div ref={containerRef} className={`${styles.postWrapper} ${left?"":styles.pushRight}`} drag="x" dragConstraints={{
+                left: -dragAreaWidth * 3,
+                right: dragAreaWidth,
+                // was wrapper ref
+            }} onDragStart={()=>{setDragging(true)}} onDragEnd={()=>{setDragging(false)}} onUpdate={(e)=>{
                 const offsetConstant = 100 // The offset in px that the first and last element can be off screen before registering as off
                 setLeftSideInView(e.x > -offsetConstant);
                 setRightSideInView(e.x < -((containerRef.current.offsetWidth - wrapperRef.current.offsetWidth) - offsetConstant))
