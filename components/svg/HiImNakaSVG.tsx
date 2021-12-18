@@ -2,7 +2,6 @@ import styles from "../../styles/hiImNakaSVG.module.css"
 
 import useElementInViewport from "../../hooks/useElementInViewport";
 import {motion} from "framer-motion";
-import { useEffect } from "react";
 
 const HiImNakaSVG = ():JSX.Element =>{
 
