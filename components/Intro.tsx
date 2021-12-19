@@ -7,7 +7,7 @@ const Intro = ():JSX.Element =>{
     return (
         <div className={styles.wrapper}>
             <div className={styles.textBox}>
-                <HiImNakaSVG />
+                <HiImNakaSVG svgColor="var(--cream)"/>
                 
                 {/*<h3>Hi! I&apos;m Naka</h3>*/}
                 <p>

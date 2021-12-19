@@ -1,13 +1,32 @@
 import styles from "../styles/getToKnow.module.css";
 import ImageOverlap from "./ImageOverlap";
+import useElementInViewport from "../hooks/useElementInViewport";
+import {motion} from "framer-motion";
 
 const GetToKnow = ():JSX.Element =>{
+    const [element,inViewport] = useElementInViewport<HTMLDivElement>(true,.6);
+    
+    const variants = {
+        initial:{
+            y:0,
+            opacity:0,
+        },
+        fadeIn:{
+            y:0,
+            opacity:1,
+            transition:{
+                type:"tween",
+                duration:.8,
+            }
+        }
+    }
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.headerWrapper}>
                 <h3>Get To Know Me</h3>
             </div>
-            <div className={styles.contentWrapper}>
+            <motion.div variants={variants} initial={"initial"} animate={inViewport?"fadeIn":""} className={styles.contentWrapper} ref={element}>
                 <div className={styles.textBox}>
                     <ul>
                         <li>
@@ -34,7 +53,7 @@ const GetToKnow = ():JSX.Element =>{
                     height={400}
                     width={266}
                 />
-            </div>
+            </motion.div>
         </div>
     )
 }
