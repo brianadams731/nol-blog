@@ -5,7 +5,8 @@ import BlogStreamPost from "./BlogStreamPost";
 
 import styles from "../styles/blogStream.module.css";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import useIsomorphicLayoutEffect from "../hooks/useIsomorphicLayoutEffect";
 import Link from "next/link";
 import {motion} from "framer-motion"; 
 import { BlogCardData } from "../graphql/adapters";
@@ -29,7 +30,8 @@ const BlogStream = ({category,data,left}:Props) =>{
     const [dragAreaWidthRight,setDragAreaWidthRight] = useState<number>(0);
     const [dragAreaWidthLeft,setDragAreaWidthLeft] = useState<number>(0);
 
-    useEffect(()=>{
+    // IF THIS COMPONENT SWITCHES TO SSR THIS WILL USE USEEFFECT, IF THIS HAPPENS REWORK WIDTH CHECK
+    useIsomorphicLayoutEffect(()=>{
         setRightSideInView(containerRef.current.offsetWidth < wrapperRef.current.offsetWidth); // shows scroll right arrow if cards exceed initial visable area
         // init drag area constraints
         reClacDragConstraints();

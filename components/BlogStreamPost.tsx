@@ -15,7 +15,7 @@ interface Props{
 
 const BlogStreamPost = ({data, dragging}:Props) =>{
 
-    const [elementRef, elementInViewport] = useElementInViewport<HTMLDivElement>(true,.5);
+    const [elementRef, elementInViewport] = useElementInViewport<HTMLDivElement>(true,.3);
 
     const variants = {
         init:{
