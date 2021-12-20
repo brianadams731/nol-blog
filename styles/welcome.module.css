@@ -68,4 +68,8 @@
     .altBox{
         padding-top: 30px;
     }
+
+    .subBox{
+        width: 100vw;
+    }
 }

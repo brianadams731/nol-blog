@@ -59,3 +59,9 @@
         width: 75vw;
     }
 }
+
+@media screen and (max-width: 550px){
+    .wrapper{
+        margin-bottom: 0px;
+    }
+}

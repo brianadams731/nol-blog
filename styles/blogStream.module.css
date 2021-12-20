@@ -1,6 +1,5 @@
 .wrapper{
     position: relative;
-    margin-bottom: 20px;
     padding: 10px;
 }
 
@@ -94,4 +93,10 @@
     height: fit-content;
     align-items: center;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 550px){
+    .wrapper{
+        margin-top: -15px;
+    }
 }

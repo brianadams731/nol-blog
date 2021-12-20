@@ -63,6 +63,15 @@
     }
     .wrapper{
         flex-direction: column;
+        margin-bottom: 0px;
+        padding-bottom: 55px;
+    }
+    .wrapper p{
+        margin: auto;
+    }
+    .wrapper::after{
+        height:100%;
+        width: 100%;
     }
     .textBox button{
         margin-top: 15px;
