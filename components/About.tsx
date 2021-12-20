@@ -7,7 +7,7 @@ const About = ():JSX.Element =>{
     return (
         <div className={styles.wrapper}>
             <div className={styles.imgWrapper}>
-                <Image width={700} height={466} objectFit="cover" src="/media/About 2.jpg" alt=""/>
+                <Image priority={true} width={700} height={466} objectFit="cover" src="/media/About 2.jpg" alt=""/>
             </div>
                 <HiImNakaSVG svgColor="var(--brown)" svgWidth={"315px"}/>
             <p>
