@@ -13,12 +13,12 @@
 
 .title{
     font-weight: 500;
-    font-size: .9rem;
+    font-size: var(--fs-standard-small);
     margin-bottom: 5px;
 }
 
 .description{
-    font-size: .8rem;
+    font-size: var(--fs-smallest);
     margin-bottom: 5px;
 }
 

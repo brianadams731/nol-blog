@@ -20,7 +20,7 @@
 
 .title{
     font-family: saturday;
-    font-size: 6rem;
+    font-size: var(--fs-hero-text);
     font-weight: 400;
     text-align: center;
     color: var(--brown);

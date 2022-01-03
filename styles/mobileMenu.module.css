@@ -18,12 +18,12 @@
     display: flex;
     flex-direction: column;
     gap:50px;
-    font-size: 2rem;
     color: white;
 }
 
 
 .wrapper li{
+    font-size: var(--fs-subheader);
     list-style-type: none;
 }
 

@@ -45,8 +45,8 @@
 .label{
     text-align: center;
     color: white;
-    font-size: 1.2rem;
-    padding: 12px;
+    font-size: var(--fs-standard);
+    padding: var(--p-tb);
     background-color: var(--green);
     transform: translate(-6%,-50%);
     transition: all ease-in-out .2s;

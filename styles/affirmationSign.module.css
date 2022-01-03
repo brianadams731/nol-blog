@@ -2,18 +2,18 @@
     text-align: center;
     color: grey;
     background-color: var(--cream);
-    padding:40px 0px;
+    padding:var(--p-standard-thick) 0px;
     margin-bottom: 25px;
 }
 
 .wrapper h3{
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: var(--fs-standard-large);
 }
 
 .wrapper h5{
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: var(--fs-standard);
 }
 
 .inputBox{
@@ -26,7 +26,7 @@
 .inputBox input{
     display: block;
     padding:7px 10px;
-    font-size: 1.1rem;
+    font-size: var(--fs-standard);
     background: none;
     border: 1px solid grey;
     border-radius: 0px;
@@ -35,7 +35,7 @@
 }
 
 .inputBox button{
-    font-size: 1.1rem;
+    font-size: var(--fs-standard);
     margin-left: 20px;
 }
 

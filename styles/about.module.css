@@ -1,5 +1,5 @@
 .wrapper{
-    padding: 30px;
+    padding: var(--p-standard);
     padding-top:0px;
 }
 
@@ -7,14 +7,15 @@
     font-family: saturday;
     font-weight: 400;
     margin-bottom: 10px;
-    font-size: 5rem;
+    font-size: var(--fs-hero-text);
     color: var(--brown);
     text-align: center;
 }
 
 .wrapper p{
     margin: auto;
-    margin-bottom: 30px;
+    font-size: var(--fs-standard);
+    margin-bottom: var(--p-standard);
     max-width: 75ch;
 }
 

@@ -17,12 +17,12 @@
 .textBox h3{
     font-family: saturday;
     font-weight: 400;
-    font-size: 5rem;
+    font-size: var(--fs-hero-text);
     margin-bottom: 5px;
 }
 
 .textBox p{
-    font-size: .8rem;
+    font-size: var(--fs-standard-small);
     width: 45ch;
 }
 

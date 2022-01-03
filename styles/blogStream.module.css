@@ -46,7 +46,7 @@
     position: relative;
     color: white;
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: var(--fs-subheader-small);
     width: max-content;
 }
 

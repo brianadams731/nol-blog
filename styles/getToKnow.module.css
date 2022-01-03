@@ -9,7 +9,7 @@
 .wrapper h3{
     color: var(--brown);
     font-weight: 400;
-    font-size: 5rem;
+    font-size: var(--fs-hero-text);
     text-align: center;
     font-family: saturday;
 }
@@ -20,7 +20,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding:  0px 30px;
+    padding:  0px var(--p-lr);
 }
 
 .contentWrapper ul{
@@ -32,6 +32,7 @@
 }
 
 .contentWrapper li{
+    font-size: var(--fs-standard);
     max-width: 50ch;
 }
 

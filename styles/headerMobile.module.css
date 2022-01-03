@@ -30,7 +30,7 @@
 
 
 .noOrdinary, .self{
-    font-size: 1.2rem;
+    font-size: var(--fs-standard);
 }
 .self{
     color: var(--light-brown);

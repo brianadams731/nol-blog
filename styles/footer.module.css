@@ -4,6 +4,7 @@
     background-color: var(--peach);
     position: relative;
     min-height: 125px;
+    font-size: car(--fs-standard-small);
 }
 
 .socialMediaWrap{

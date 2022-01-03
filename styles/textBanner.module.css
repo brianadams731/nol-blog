@@ -1,6 +1,6 @@
 .wrap{
     width: 100%;
-    padding:30px;
+    padding:var(--p-lr);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,7 +9,7 @@
 
 .wrap h1{
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: var(--fs-standard-large);
     text-align: center;
     max-width: 40ch;
 }

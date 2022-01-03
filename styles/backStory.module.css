@@ -1,5 +1,5 @@
 .header{
-    font-size: 5rem;
+    font-size: var(--fs-hero-text);
     color: var(--brown);
     font-family: saturday;
     font-weight: 400;
@@ -12,11 +12,12 @@
     gap:30px;
     align-items: center;
     justify-content: center;
-    padding: 15px 30px;
+    padding:var(--p-tb) var(--p-lr);
     padding-bottom: 30px;
 }
 
 .textBox p{
     display: block;
+    font-size: var(--fs-standard);
     max-width: 75ch;
 }

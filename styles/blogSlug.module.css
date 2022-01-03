@@ -6,7 +6,7 @@
 
 .blogTitle{
     font-family: saturday;
-    font-size: 7rem;
+    font-size: var(--fs-hero-text);
     font-weight: 400;
     text-align: center;
     margin-top: 35px;

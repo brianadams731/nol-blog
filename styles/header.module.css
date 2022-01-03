@@ -13,7 +13,7 @@
 
 .headText{
     line-height: 1;
-    font-size: 1.3rem;
+    font-size: var(--fs-standard-large);
 }
 .nav {
     display: flex;
@@ -47,7 +47,7 @@
 .navLinks{
     display: flex;
     gap: 20px;
-    font-size: 1.2rem;
+    font-size: var(--fs-standard);
 }
 
 .navLinks li{

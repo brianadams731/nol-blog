@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding:0px 55px;
+    padding:0px var(--p-thick);
     padding-bottom: 5px;
     margin-bottom: 50px;
 }
@@ -20,11 +20,13 @@
 .textBox{
     margin-top: 8%;
     color: white;
+    font-size: var(--fs-standard);
+    padding-bottom: 15px;
 }
 
 .textBox h3{
     font-family: saturday;
-    font-size: 5rem;
+    font-size: var(--fs-hero-text);
     font-weight: 400;
     text-align: center;
 }

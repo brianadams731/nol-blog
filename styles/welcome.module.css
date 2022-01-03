@@ -39,12 +39,15 @@
 }
 
 .subBox{
+    font-size: var(--fs-standard);
     background-color: var(--light-brown);
     min-width: 95%;
     padding: 20px 35px;
+    padding: var(--p-tb) var(--p-lr);
     margin-top: 5px;
 }
 .altBox h3{
+    font-size: var(--fs-standard-large);
     font-weight: 500;
 }
 

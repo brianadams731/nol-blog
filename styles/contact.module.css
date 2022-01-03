@@ -4,13 +4,13 @@
     align-items: flex-start;
     justify-content: space-between;
     background-color: var(--cream);
-    padding:50px;
+    padding:var(--p-thick);
     margin-bottom: 50px;
 }
 
 .textBox h3{
     font-weight: 400;
-    font-size: 5rem;
+    font-size: var(--fs-hero-text);
     font-family: saturday;
     color: var(--brown);
     margin-bottom: 15px;
@@ -18,6 +18,7 @@
 
 .textBox p{
     max-width: 45ch;
+    font-size: var(--fs-standard);
 }
 
 .form input, .form textarea{
@@ -25,7 +26,7 @@
     border: none;
     width: 325px;
     font-family: Montserrat;
-    font-size: 1.1rem;
+    font-size: var(--fs-standard);
 }
 
 .form textarea{
@@ -43,7 +44,7 @@
 
 .form button{
     background-color: var(--slate);
-    font-size: 1rem;
+    font-size: var(--fs-standard);
     padding:10px 25px;
 }
 

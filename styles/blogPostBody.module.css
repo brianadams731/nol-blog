@@ -11,6 +11,6 @@
     margin-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px;
-    font-size: 1.2rem;
+    font-size: var(--fs-standard);
     max-width: 75ch;
 }

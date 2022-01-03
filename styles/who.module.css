@@ -1,7 +1,7 @@
 .header h3{
     font-family: saturday;
     font-weight: 400;
-    font-size: 5rem;
+    font-size: var(--fs-hero-text);
     line-height: .8;
     color: grey;
     text-align: center;
@@ -22,7 +22,7 @@
 }
 .textBox p{
     max-width: 35ch;
-    font-size: .9rem;
+    font-size: var(--fs-standard-small);
     margin-bottom: 25px;
 }
 .textBox p:last-of-type{
